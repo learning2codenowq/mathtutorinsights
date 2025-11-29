@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GCSE & A-Level Maths Tutor Online | Math Tutor Insights</title>
+<meta name="description" content="Expert online maths tutor for GCSE, A-Level & IGCSE. Boost grades, confidence & understanding with 1-to-1 and group tuition. Guaranteed results in 75 days.">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="icon" type="image/png" href="logo.png">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#5271ff',
+        secondary: '#38b6ff'
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        DEFAULT: '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '20px',
+        '2xl': '24px',
+        '3xl': '32px',
+        'full': '9999px',
+        'button': '8px'
+      }
+    }
+  }
+}
+</script>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; }
+
+/* Premium Performance Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from { 
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(82, 113, 255, 0.4);
+  }
+  70% { 
+    box-shadow: 0 0 0 10px rgba(82, 113, 255, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Premium Scroll Animation Classes */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-slide-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-slide-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-slide-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-slide-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-scale.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scroll-bounce {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: opacity, transform;
+}
+
+.scroll-bounce.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Premium Hover Effects */
+.premium-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.premium-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(82, 113, 255, 0.15);
+}
+
+.premium-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  will-change: transform, box-shadow;
+}
+
+.premium-card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease-out;
+  will-change: left;
+}
+
+.premium-card-hover:hover::before {
+  left: 100%;
+}
+
+.premium-card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(82, 113, 255, 0.2);
+}
+
+.premium-button-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.premium-button-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(82, 113, 255, 0.3);
+}
+
+/* Luxury Text Effects */
+.premium-text-glow {
+  text-shadow: 0 0 20px rgba(82, 113, 255, 0.3);
+  transition: text-shadow 0.3s ease;
+}
+
+.premium-text-glow:hover {
+  text-shadow: 0 0 30px rgba(82, 113, 255, 0.6);
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-rotate {
+  animation: rotate 20s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.8s ease-out;
+}
+
+.button-hover {
+  transition: transform 0.2s ease-out;
+}
+
+.button-hover:hover {
+  transform: translateY(-1px);
+}
+
+/* Gradient Background */
+.gradient-bg {
+  background: linear-gradient(135deg, #5271ff 0%, #38b6ff 100%);
+}
+
+@keyframes glow-gradient {
+  0% { filter: blur(48px) brightness(1.1); background-position: 0% 50%; }
+  50% { filter: blur(64px) brightness(1.2); background-position: 100% 50%; }
+  100% { filter: blur(48px) brightness(1.1); background-position: 0% 50%; }
+}
+
+.animate-glow-gradient {
+  animation: glow-gradient 7s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+.spotlight-card {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.spotlight-card.enter {
+  opacity: 0;
+  transform: translateY(48px);
+}
+
+.spotlight-card.enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.spotlight-card.exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.spotlight-card.exit-active {
+  opacity: 0;
+  transform: translateY(-48px);
+}
+
+/* Force brand blue on menu hover */
+.force-brand-hover:hover {
+  color: #5271ff !important;
+  transition: color 0.2s;
+}
+
+/* Go to Top button styles */
+#goTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+  display: none;
+  background: linear-gradient(90deg, #5271ff 0%, #38b6ff 100%);
+  color: #fff;
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(82,113,255,0.15);
+  width: 3.5rem;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#goTopBtn:hover {
+  background: linear-gradient(90deg, #38b6ff 0%, #5271ff 100%);
+  box-shadow: 0 6px 24px rgba(82,113,255,0.25);
+  transform: translateY(-2px) scale(1.1);
+}
+
+/* Premium text effects */
+.premium-text-glow {
+  text-shadow: 0 0 20px rgba(82,113,255,0.3);
+  transition: text-shadow 0.3s ease;
+}
+
+.premium-text-glow:hover {
+  text-shadow: 0 0 30px rgba(82,113,255,0.6);
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+#calendly-modal .calendly-inline-widget, #calendly-modal .calendly-widget-rounded, #calendly-modal > div {
+  border-radius: 1.5rem !important;
+  overflow: hidden !important;
+}
+
+/* Only for service section cards: allow badge to overflow */
+.service-card {
+  overflow: visible;
+}
+
+/* Allow badge to overflow only for service cards */
+.service-card-fix {
+  overflow: visible !important;
+}
+</style>
+</head>
+<body class="bg-white">
+<nav class="fixed top-0 left-0 right-0 bg-white z-50 w-full">
+  <div class="px-4 sm:px-6 lg:px-8 w-full">
+    <div class="flex justify-between items-center h-20">
+      <a href="#" class="flex items-center">
+        <img src="logo.png" alt="Math Tutor Insights Logo" class="h-16 w-auto mr-2">
+      </a>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-12">
+        <a href="#" class="text-gray-600 font-bold force-brand-hover">Home</a>
+        <a href="#about" class="text-gray-600 font-bold force-brand-hover">About</a>
+        <a href="#services" class="text-gray-600 font-bold force-brand-hover">Services</a>
+        <a href="#testimonials" class="text-gray-600 font-bold force-brand-hover">Testimonials</a>
+        <a href="more-reviews.html" class="text-gray-600 font-bold force-brand-hover">Results</a>
+        <a href="#faq" class="text-gray-600 font-bold force-brand-hover">FAQs</a>
+      </div>
+      <button class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-8 py-3 text-sm font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition hidden md:inline-block">Book a Free Call</button>
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-toggle" class="md:hidden ml-4 text-3xl text-primary focus:outline-none">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-white shadow-lg rounded-b-xl px-6 py-4 absolute left-0 right-0 top-20 z-40">
+      <a href="#" class="block text-gray-600 font-bold force-brand-hover">Home</a>
+      <a href="#about" class="block text-gray-600 font-bold force-brand-hover">About</a>
+      <a href="#services" class="block text-gray-600 font-bold force-brand-hover">Services</a>
+      <a href="#testimonials" class="block text-gray-600 font-bold force-brand-hover">Testimonials</a>
+      <a href="more-reviews.html" class="block text-gray-600 font-bold force-brand-hover">Results</a>
+      <a href="#faq" class="block text-gray-600 font-bold force-brand-hover">FAQs</a>
+      <button class="w-full !rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-8 py-3 text-sm font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition mt-2 open-calendly">Book a Call</button>
+    </div>
+  </div>
+</nav>
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', function() {
+      menu.classList.toggle('hidden');
+    });
+    // Optional: close menu on link click
+    menu.querySelectorAll('a,button').forEach(el => {
+      el.addEventListener('click', () => menu.classList.add('hidden'));
+    });
+  });
+</script>
+<main>
+<section class="pt-32 pb-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center space-x-2 bg-blue-50 text-primary px-4 py-2 rounded-full scroll-animate premium-hover animate-pulse">
+<i class="ri-star-line animate-rotate"></i>
+<span class="text-sm font-medium">90% of students Go Up 2 grades in a Month</span>
+</div>
+<h1 class="text-5xl sm:text-5xl md:text-6xl lg:text-6xl font-bold leading-tight lg:leading-[1.1] scroll-animate premium-text-glow text-center lg:text-left px-2 sm:px-4">
+  Move Up 3-5 Grades in 75 Days Guaranteed 
+</h1>
+<p class="text-xl text-gray-600 scroll-animate">Impactful,productive lessons students dream of having every week for better results and lasting confidence.</p>
+<div class="flex flex-col sm:flex-row gap-4 scroll-animate">
+<button class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-8 py-4 text-lg font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition whitespace-nowrap premium-button-hover">Book Free Strategy Call</button>
+<a href="#free-guide" class="!rounded-button bg-blue-50 text-primary px-8 py-4 text-lg font-medium hover:bg-blue-100 whitespace-nowrap flex items-center justify-center gap-2 premium-hover">
+<i class="ri-download-line"></i>Get Free Topic Tips
+</a>
+</div>
+<div class="flex items-center gap-6 pt-6 scroll-animate">
+<div class="flex items-center space-x-4">
+<div class="flex items-center space-x-2 bg-green-50 text-green-700 px-3 py-1 rounded-full premium-hover scroll-slide-left stagger-1">
+<i class="ri-check-double-line text-sm"></i>
+<span class="text-sm font-medium">12+ Years Experience</span>
+</div>
+<div class="flex items-center space-x-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full premium-hover scroll-slide-left stagger-2">
+<i class="ri-award-line text-sm"></i>
+<span class="text-sm font-medium">UK Maths Graduate</span>
+</div>
+<div class="flex items-center space-x-2 bg-purple-50 text-purple-700 px-3 py-1 rounded-full premium-hover scroll-slide-left stagger-3">
+<i class="ri-star-line text-sm"></i>
+<span class="text-sm font-medium">DBS Enhanced Check</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative scroll-slide-right">
+<img class="w-full rounded-2xl shadow-2xl premium-card-hover animate-float" src="https://readdy.ai/api/search-image?query=modern%20minimalist%20mathematics%20study%20setup%20with%20digital%20tablet%20displaying%20geometric%20formulas%20and%20graphs%2C%20clean%20desk%20with%20mathematical%20tools%2C%20textbooks%2C%20sleek%20calculator%2C%20abstract%20mathematical%20visualization%20in%20soft%20blue%20lighting%2C%20no%20people%2C%20professional%20and%20inspiring%20workspace&width=800&height=600&seq=4&orientation=landscape" alt="Online Maths Tuition for KS3, GCSE & A-Level Students in UK and Internationaly">
+<div class="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-lg p-6 max-w-xs">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+<i class="ri-trophy-line text-2xl text-primary"></i>
+</div>
+<div>
+<div class="font-medium">Average Improvement</div>
+<div class="text-2xl font-bold text-primary">3 Grades</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-white p-8 rounded-xl shadow-sm scroll-scale premium-card-hover stagger-1">
+<div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+<i class="ri-user-star-line text-2xl text-primary"></i>
+</div>
+<div class="text-3xl font-bold">1500+</div>
+<div class="text-gray-600 mt-1">Hours of Teaching</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm scroll-scale premium-card-hover stagger-2">
+<div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+<i class="ri-graduation-cap-line text-2xl text-primary"></i>
+</div>
+<div class="text-3xl font-bold">90%</div>
+<div class="text-gray-600 mt-1">A-Level Students Improve Within 1 Month</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm scroll-scale premium-card-hover stagger-3">
+<div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+<i class="ri-group-line text-2xl text-primary"></i>
+</div>
+<div class="text-3xl font-bold">500+</div>
+<div class="text-gray-600 mt-1">UK/International Students Helped </div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm scroll-scale premium-card-hover stagger-4">
+<div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+<i class="ri-award-line text-2xl text-primary"></i>
+</div>
+<div class="text-3xl font-bold">70%</div>
+<div class="text-gray-600 mt-1">GCSE Students Move Up a Set In a School Term</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-8">
+<h2 class="text-4xl font-bold leading-tight scroll-animate premium-text-glow">Why Parents And Students Choose Us?</h2>
+<p class="text-xl text-gray-600 scroll-animate">We combine proven teaching methods with personalized mentorship to help every student reach their full potential. Our track record speaks for itself.</p>
+<div class="space-y-4 scroll-animate">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div class="text-gray-600">Our Result-Proven Connective-Acceleration Method.</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div class="text-gray-600">Immediate Impact From The First Lesson Or Paid Trail.</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div class="text-gray-600">We Tackle Real Problems Left Untreated In The Classroom.</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div class="text-gray-600">Connect and mentor every child to value their education.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- about Tutor Section -->
+<section class="py-24 bg-white" id="about">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900 scroll-animate premium-text-glow">
+      About me
+    </h1>
+    
+    <!-- Photo on top -->
+    <div class="flex justify-center mb-12 flex-col items-center">
+      <div class="relative w-64 h-64 md:w-80 md:h-80 scroll-scale">
+        <img 
+          src="imgmath.jpg" 
+          alt="Online KS3, GCSE, IGCSE & A-Level Maths Tutor Shabiib teaching a student" 
+          class="w-full h-full object-cover rounded-full shadow-2xl border-8 border-blue-100 ring-4 ring-primary/20 premium-card-hover animate-float"
+        >
+        <div class="absolute inset-0 rounded-full bg-primary/10 pointer-events-none"></div>
+      </div>
+      
+    </div>
+    
+    <!-- Text content -->
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="space-y-4">
+       <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 scroll-animate">
+          Hi I'm Shabiib,
+        </h2>
+        <h4 class="text-1xl md:text-2xl text-gray-600 font-bold text-primary">
+           Founder and Specialist Maths Tutor and Mentor at MathTutorInsights.
+        </h4>
+        
+        <p class="text-lg text-gray-700 leading-relaxed">
+          For over 13 years I have helped students aged 11 to 19 build confidence, improve grades, and feel like maths finally clicks. Families call me part tutor and part coach because I teach both the methods and the mindset.
+        </p>
+        
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Having helped hundreds of students move up 3 to 5 grades in GCSE,IGCSE and A-level. It includes student passing after a resit or moved up sets. Teachers and headteachers in the education field have chosen me to support their own child outside the classroom.
+        </p>
+        
+        <p class="text-lg text-gray-700 leading-relaxed">
+          I began tutoring at 16 at the start of my A levels. My path wasn’t perfect. I failed my first year at university, rebuilt, and graduated with a 2:1 in maths with a year in industry. I also played professional basketball as a teenager and later stepped away from the professional game to focus fully on my maths degree. That journey shaped the calm; step-by-step way I teach and strengthened the discipline and coaching style I bring to every lesson.
+        </p>
+        
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Tutoring has always been my first choice, not a step after classroom teaching. Consistent student progress and the trust of parents and teachers has kept me committed to delivering impact.
+        </p>
+        
+        <p class="text-lg text-gray-700 leading-relaxed">
+          I stay active with weekly training, which keeps my energy high in lesson. I’ve also travelled across Europe, the Middle East, Asia and Africa. This has helped connect more with students and parents.
+        </p>
+      </div>
+      
+      <!-- Removed achievements box as requested -->
+      
+      <!-- Call to Action -->
+      <div class="text-center pt-8">
+        <button class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-8 py-4 text-lg font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition transform hover:scale-105">
+          Book a Free Call
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who is this programme for? Section -->
+<section class="py-24 bg-white" id="programme-for">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Who is this programme for?</h2>
+      <p class="text-xl text-gray-600 scroll-animate max-w-2xl mx-auto">Our math programmes are carefully designed for students struggling with the 5 common problems below. If any of these sound familiar, you're in the right place!</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Topic 1 Subject Knowledge -->
+      <div class="card-gradient-border bg-white rounded-2xl p-10 shadow-xl border border-gray-100 m-2 flex flex-col items-center w-full scroll-scale scroll-animate premium-card-hover hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300" style="position: relative;">
+        <h3 class="text-2xl font-bold mb-3 text-center bg-gradient-to-r from-[#5271ff] to-[#38b6ff] bg-clip-text text-transparent">Gaps in Subject Knowledge</h3>
+        <p class="text-gray-700 leading-relaxed text-center text-lg">Gaps are feedback to a student that their maths is not connecting. We connect new knowledge to old, like a puzzle, making concepts unforgettable.</p>
+      </div>
+      <!-- Topic 2: Lack of Focus and Interest in Maths -->
+      <div class="card-gradient-border bg-white rounded-2xl p-10 shadow-xl border border-gray-100 m-2 flex flex-col items-center w-full scroll-scale scroll-animate premium-card-hover hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300" style="position: relative;">
+        <h3 class="text-2xl font-bold mb-3 text-center bg-gradient-to-r from-[#5271ff] to-[#38b6ff] bg-clip-text text-transparent">Lack of Focus & Interest</h3>
+        <p class="text-gray-700 leading-relaxed text-center text-lg">This occurs from low connection and trust from student with a tutor. We develop their focus and interset for parents to see real changes in their childs studying and hear what they learnt each lesson.</p>
+      </div>
+      <!-- Topic 3: Falling Behind in Class -->
+      <div class="card-gradient-border bg-white rounded-2xl p-10 shadow-xl border border-gray-100 m-2 flex flex-col items-center w-full scroll-scale scroll-animate premium-card-hover hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300" style="position: relative;">
+        <h3 class="text-2xl font-bold mb-3 text-center bg-gradient-to-r from-[#5271ff] to-[#38b6ff] bg-clip-text text-transparent">Falling Behind in Class</h3>
+        <p class="text-gray-700 leading-relaxed text-center text-lg">Whether it's fast-paced topics or time away from school, we help students catch up and move ahead, building confidence every step of the way.</p>
+      </div>
+      <!-- Topic 4: Busy Schedules -->
+      <div class="card-gradient-border bg-white rounded-2xl p-10 shadow-xl border border-gray-100 m-2 flex flex-col items-center w-full scroll-scale scroll-animate premium-card-hover hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300" style="position: relative;">
+        <h3 class="text-2xl font-bold mb-3 text-center bg-gradient-to-r from-[#5271ff] to-[#38b6ff] bg-clip-text text-transparent">Busy Schedules</h3>
+        <p class="text-gray-700 leading-relaxed text-center text-lg">Busy with sports or hobbies? As a former athlete, students get first hand experience the best learning practise to excel in maths whilst doing what they love.</p>
+      </div>
+      <!-- Topic 5: Week Exam Instincts (centered) -->
+      <div class="md:col-span-2 flex justify-center">
+        <div class="card-gradient-border bg-white rounded-2xl p-10 shadow-xl border border-gray-100 m-2 flex flex-col items-center w-full max-w-xl scroll-scale scroll-animate premium-card-hover hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300" style="position: relative;">
+          <h3 class="text-2xl font-bold mb-3 text-center bg-gradient-to-r from-[#5271ff] to-[#38b6ff] bg-clip-text text-transparent">Weak Exam Instincts</h3>
+          <p class="text-gray-700 leading-relaxed text-center text-lg">Students may have the knowledge but <em>do not know where to start</em> on an exam question or determine the final steps in the working out to reach the answers. We train them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Programme Pillars Section with Rectangular Images -->
+<section class="bg-white py-20" id="pillars">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Our 4 Programme Pillars for Student Success</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-visible">
+
+      <!-- Pillar 1: Problem Awareness -->
+      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Pillar 1</span>
+        <div class="flex-1 text-center mt-6">
+          <img src="https://i.pinimg.com/736x/91/c9/fe/91c9fe894c22dfe20d272ffd73db8225.jpg" alt="Problem Awareness" class="w-full h-36 object-cover mb-4 rounded-lg shadow-md">
+          <h3 class="text-lg font-bold mb-2 text-gray-800">Problem Awareness</h3>
+          <p class="text-sm text-gray-700"> Your child is stuck and not sure why.
+ Our short skills check finds root causes for missing methods,
+ confusing exam words and low confidence. Clear targets
+ provided to begin the journey of progress</p>
+        </div>
+      </div>
+
+      <!-- Pillar 2: Academic & Human Connection -->
+      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Pillar 2</span>
+        <div class="flex-1 text-center mt-6">
+          <img src="https://i.pinimg.com/1200x/7d/36/1d/7d361dc416f454cdefa1216431f97893.jpg" alt="Academic & Human Connection" class="w-full h-36 object-cover mb-4 rounded-lg shadow-md">
+          <h3 class="text-lg font-bold mb-2 text-gray-800">Academic & Human Connection</h3>
+          <p class="text-sm text-gray-700"> We reconnect the dots so maths feels smaller and
+ clearer. Your child opens up, shares worries, and
+ feels heard. They no longer feel alone or lost seeing
+ how topics link</p>
+        </div>
+      </div>
+
+      <!-- Pillar 3: Topic Acceleration -->
+      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Pillar 3</span>
+        <div class="flex-1 text-center mt-6">
+          <img src="https://i.pinimg.com/736x/2a/e7/c4/2ae7c4c3eb36b2527bafdff0235d4f12.jpg" alt="Topic Acceleration" class="w-full h-36 object-cover mb-4 rounded-lg shadow-md">
+          <h3 class="text-lg font-bold mb-2 text-gray-800">Topic Acceleration</h3>
+          <p class="text-sm text-gray-700"> From topic practice to full exam papers.
+ Variation meets accuracy and speed, so your child can answer any
+ question style within every topic with time to check workings.</p>
+        </div>
+      </div>
+
+      <!-- Pillar 4: Grade Retention -->
+      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Pillar 4</span>
+        <div class="flex-1 text-center mt-6">
+          <img src="https://i.pinimg.com/736x/93/8d/51/938d51c8291f006b0146aa7e8dda7b5f.jpg" alt="Grade Retention" class="w-full h-36 object-cover mb-4 rounded-lg shadow-md">
+          <h3 class="text-lg font-bold mb-2 text-gray-800">Grade Retention</h3>
+          <p class="text-sm text-gray-700">Improved grades from our mocks
+ carry over to school mocks moving up at least 3
+ grades</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-24 bg-gray-50" id="testimonials">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">What Our Students & Parents Say?</h2>
+      <p class="text-xl text-gray-600 scroll-animate">Real results from real students who transformed their maths grades</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-full premium-card-hover scroll-bounce">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-6 italic flex-grow">"Since beginning Maths sessions my son's confidence has definitely improved. He is awaiting news of moving sets at school as he was able to complete questions on a recent test, that were not expected for his current set of maths. Great news!"</p>
+        <div class="flex items-center mt-auto">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">S</div>
+          <div>
+            <div class="font-semibold text-gray-900"> Parent of Year 10 Student</div>
+            <div class="text-sm text-gray-600">27 Mar 2025</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-full premium-card-hover scroll-bounce">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-6 italic flex-grow">"Shabib is a brilliant math tutor, his way of teachings are fun and make everything in math simple which helped me pass my tests. Before I was not passing as what I have learnt in school was not helpful and never shows up in the test. Schools also always go at the pace of the top students making others fall behind, however Shabib turned this around for me making me top of my class achieving higher than everyone else"</p>
+        <div class="flex items-center mt-auto">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">J</div>
+          <div>
+            <div class="font-semibold text-gray-900"> Student-Yr11 GCSE Higher</div>
+            <div class="text-sm text-gray-600">19 Feb 2025</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-full premium-card-hover scroll-bounce">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-6 italic flex-grow">"Our experience with Shabiib has been fantastic! They have a great way of explaining complex maths concepts in a clear and engaging manner, making lessons enjoyable and easy to understand. Since starting tuition, my daughter has grown in confidence and improved significantly in their problem-solving skills."</p>
+        <div class="flex items-center mt-auto">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">M</div>
+          <div>
+            <div class="font-semibold text-gray-900">Parent of Year 10 Student</div>
+            <div class="text-sm text-gray-600">03 Apr 2025</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 4 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-full premium-card-hover scroll-bounce">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-6 italic flex-grow">"Shabiib is an excellent teacher. He explains questions very clearly and has given my daughter confidence in tackling difficult questions to prepare her for her upcoming GCSE exams. I would have no reservation in recommending him. Thank you so much."</p>
+        <div class="flex items-center mt-auto">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">E</div>
+          <div>
+            <div class="font-semibold text-gray-900">Parent of Yr 11 GCSE Student</div>
+            <div class="text-sm text-gray-600">12 May 2025</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 5 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-full premium-card-hover scroll-bounce">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-6 italic flex-grow">"I have found Shabiib extremely helpful he was very good in explaining Alevel content and made me feel confident for my exams. After the lessons he always sends additional practise and lesson overview which I found very helpful and I would recommend him as a tutor."</p>
+        <div class="flex items-center mt-auto">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">A</div>
+          <div>
+            <div class="font-semibold text-gray-900">Student: A-Level Maths:(Yr13)</div>
+            <div class="text-sm text-gray-600">17 Jun 2025</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 6 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-full premium-card-hover scroll-bounce">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-6 italic flex-grow">"Shabiib is an excellent tutor who is completely invested in his work. He has greatly helped my daughter in her preparation for Maths A level. I highly recommend him."</p>
+        <div class="flex items-center mt-auto">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">L</div>
+          <div>
+            <div class="font-semibold text-gray-900">Parent of Yr 13 Student</div>
+            <div class="text-sm text-gray-600">17 Jun 2025</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 7 (moved from separate row) -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-full premium-card-hover scroll-bounce">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-6 italic flex-grow">"Thank you so much shabiib You have helped Issy rekindle her love of Maths. She has found statistics more accessible from your teaching and it has secured a knowledge that she was not getting at college. Your transition work you did last summer helped her to close many gaps where a non specialist teacher had not delivered the course as successfully as she needed. You helped Issy build strong foundations in her Pure work. We cannot thank you enough."</p>
+        <div class="flex items-center mt-auto">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">H</div>
+          <div>
+            <div class="font-semibold text-gray-900">Headteacher and Parent of Year 13 Student</div>
+            <div class="text-sm text-gray-600">29 May 2025</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 8 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-full premium-card-hover scroll-bounce">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-6 italic flex-grow">"Very extensive notes and very insightful in spending time going over errors and to create steps into solving answers and to make sure that it is understood in the lead up the IGCSE examinations a great tutor and a very nice person."</p>
+        <div class="flex items-center mt-auto">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">S</div>
+          <div>
+            <div class="font-semibold text-gray-900">Student- IGCSE Higher Maths</div>
+            <div class="text-sm text-gray-600">22 Oct 2024</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 9 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col h-full premium-card-hover scroll-bounce">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <p class="text-gray-700 mb-6 italic flex-grow">"We are so grateful for Shabiib! My daughter truly loves her math lessons and frequently expresses how much they are helping her. It's amazing to see her confidence grow as she gains a deeper understanding of the material. Shabiib has a unique way of making complex concepts easy to grasp, and my daughter looks forward to each session. Highly recommend!"</p>
+        <div class="flex items-center mt-auto">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">P</div>
+          <div>
+            <div class="font-semibold text-gray-900">Parent of GCSE Resit Student</div>
+            <div class="text-sm text-gray-600">28 Oct 2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Call to Action -->
+    <div class="text-center mt-16 scroll-animate">
+      <h3 class="text-2xl font-bold mb-4 premium-text-glow">Ready to Transform Your Maths Grades?</h3>
+      <p class="text-lg text-gray-600 mb-8">See our many students move up 3-5 grades</p>
+      <a href="more-reviews.html" class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-6 py-3 text-lg font-bold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition premium-button-hover inline-block">See Student Results</a>
+    </div>
+  </div>
+</section>
+
+<!-- Our Services Section -->
+<section class="bg-white py-20" id="services">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Our Programmes</h2>
+      <p class="text-xl text-gray-600 scroll-animate">Guaranteed Maths Confidence and Grade Improvements within 3 months</p>
+    </div>
+    
+    <!-- Pricing Toggle -->
+    <div class="flex justify-center mb-8">
+      <div class="bg-blue-50 rounded-full p-1 inline-flex">
+        <button id="monthly-toggle" class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 text-gray-600 hover:text-gray-800">Monthly</button>
+        <button id="three-months-toggle" class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white shadow-sm">3 Months</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center overflow-visible">
+
+      <!-- 1-on-1 Online Tutoring -->
+      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Limited Spaces</span>
+        <div class="flex-1">
+          <div class="w-10 h-10 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-lg flex items-center justify-center mb-3">
+            <i class="ri-user-star-line text-white text-lg"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-gray-800">Intensive 1-1 programme</h3>
+          <div class="monthly-price hidden">
+            <div class="text-3xl font-bold mb-1 text-[#5271ff]">£350<span class="text-sm text-gray-400 font-medium"> /month</span></div>
+          </div>
+          <div class="three-months-price">
+            <div class="text-3xl font-bold mb-1 text-[#5271ff]">£900<span class="text-sm text-gray-400 font-medium"> For 3 Months</span></div>
+            <div class="text-sm text-gray-600 mb-1">2 installments available</div>
+          </div>
+          <ul class="mt-4 mb-6 space-y-2 text-sm text-gray-700">
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>2 Lessons per week</li>
+
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Tailored Learning Plan</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Free Learning Portal</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Immediate Exam Style Practice</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Homework and feedback provided</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Additional Mentoring & Personal Support</li>
+          </ul>
+        </div>
+        <button type="button" class="w-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white font-semibold py-3 rounded-xl text-sm text-center mt-2 focus:outline-none open-calendly transition-all duration-200 ease-in-out hover:from-[#4060e0] hover:to-[#2aaee0] hover:shadow-lg hover:-translate-y-0.5">Book a call</button>
+      </div>
+
+      <!-- Weekly Group Tutoring -->
+      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Most Popular</span>
+        <div class="flex-1">
+          <div class="w-10 h-10 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-lg flex items-center justify-center mb-3">
+            <i class="ri-group-line text-white text-lg"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-gray-800"> Small Group Programme</h3>
+          <div class="text-gray-600 mb-3 text-xs">Max 6 students per group</div>
+          <div class="monthly-price hidden">
+            <div class="text-3xl font-bold mb-1 text-[#5271ff]">£200<span class="text-sm text-gray-400 font-medium"> /month</span></div>
+          </div>
+          <div class="three-months-price">
+            <div class="text-3xl font-bold mb-1 text-[#5271ff]">£500<span class="text-sm text-gray-400 font-medium"> For 3 Months</span></div>
+            <div class="text-sm text-gray-600 mb-1">2 installments available</div>
+          </div>
+          <ul class="mt-4 mb-6 space-y-2 text-sm text-gray-700">
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>2 Lessons per week</li>
+            
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Interactive peer learning</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Free Learning Portal</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Immediate Exam Style Practice</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Progress tracking included</li>
+          </ul>
+        </div>
+        <button type="button" class="w-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white font-semibold py-3 rounded-xl text-sm text-center mt-2 focus:outline-none open-calendly transition-all duration-200 ease-in-out hover:from-[#4060e0] hover:to-[#2aaee0] hover:shadow-lg hover:-translate-y-0.5">Book a call</button>
+      </div>
+
+      <!-- Trial Lesson -->
+      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+        <div class="flex-1">
+          <div class="w-10 h-10 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-lg flex items-center justify-center mb-3">
+            <i class="ri-play-circle-line text-white text-lg"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-gray-800">Trial Lesson</h3>
+          <div class="text-gray-600 mb-3 text-xs">Try before you commit</div>
+          <div class="text-3xl font-bold mb-1 text-[#5271ff]">£25<span class="text-sm text-gray-400 font-medium"> one-time</span></div>
+          <ul class="mt-4 mb-6 space-y-2 text-sm text-gray-700">
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>1-to-1 or group trial</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Book Anytime</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>Fee credited if you join</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>No obligation</li>
+            <li class="flex items-center"><span class="w-4 h-4 bg-[#5271ff] text-white rounded-full flex items-center justify-center mr-2 text-xs">✓</span>100% Success Rate</li>
+          </ul>
+        </div>
+        <button type="button" class="w-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white font-semibold py-3 rounded-xl text-sm text-center mt-2 focus:outline-none open-calendly transition-all duration-200 ease-in-out hover:from-[#4060e0] hover:to-[#2aaee0] hover:shadow-lg hover:-translate-y-0.5">Book a call</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const monthlyToggle = document.getElementById('monthly-toggle');
+    const threeMonthsToggle = document.getElementById('three-months-toggle');
+    
+    const monthlyPrices = document.querySelectorAll('.monthly-price');
+    const threeMonthsPrices = document.querySelectorAll('.three-months-price');
+    
+    monthlyToggle.addEventListener('click', function() {
+      // Update toggle button styles
+      monthlyToggle.className = 'px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white shadow-sm';
+      threeMonthsToggle.className = 'px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 text-gray-600 hover:text-gray-800';
+      
+      // Show monthly prices, hide 3-month prices
+      monthlyPrices.forEach(price => price.classList.remove('hidden'));
+      threeMonthsPrices.forEach(price => price.classList.add('hidden'));
+    });
+    
+    threeMonthsToggle.addEventListener('click', function() {
+      // Update toggle button styles
+      threeMonthsToggle.className = 'px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white shadow-sm';
+      monthlyToggle.className = 'px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 text-gray-600 hover:text-gray-800';
+      
+      // Show 3-month prices, hide monthly prices
+      threeMonthsPrices.forEach(price => price.classList.remove('hidden'));
+      monthlyPrices.forEach(price => price.classList.add('hidden'));
+    });
+  });
+</script>
+
+
+<!-- Free Guide Section -->
+<section class="py-20" id="free-guide">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Get Your Free Guide</h2>
+    </div>
+    <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-2xl premium-card-hover animate-float">
+      <h3 class="text-xl font-bold mb-6 text-primary text-center">KS3 To A-Level Maths Topic Guide</h3>
+      <form id="free-guide-form" class="space-y-6" action="https://script.google.com/macros/s/AKfycbyaZ7FVl9Mx8cNm_87_J5__kLKrqRRmg63TZeth-VkHEsF5GKJbiurB0TlSBorpFJjc/exec" method="POST">
+        <input type="hidden" name="form-name" value="free-guide">
+        <div>
+          <label for="fg-name" class="block text-gray-700 font-medium mb-1">Your Name</label>
+          <input id="fg-name" type="text" name="name" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-primary bg-gray-50 text-lg transition" required>
+        </div>
+        <div>
+          <label for="fg-email" class="block text-gray-700 font-medium mb-1">Your Email</label>
+          <input id="fg-email" type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-primary bg-gray-50 text-lg transition" required>
+        </div>
+   <div class="mb-4">
+  <label for="fg-level" class="block text-gray-700 font-medium mb-2">Your Level</label>
+  <div class="relative">
+    <select 
+      id="fg-level" 
+      name="level" 
+      class="w-full px-4 py-3 pr-10 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-gray-800 font-medium transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer appearance-none"
+      required
+    >
+      <option value="" selected disabled class="text-gray-400">Select your level</option>
+      <option value="KS3" class="hover:bg-blue-50">KS3</option>
+      <option value="GCSE" class="hover:bg-blue-50">GCSE</option>
+      <option value="A-LEVEL" class="hover:bg-blue-50">A-Level</option>
+    </select>
+    <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+      <i class="ri-arrow-down-s-fill text-primary text-xl"></i>
+    </div>
+  </div>
+</div>  
+
+        <!-- Google reCAPTCHA checkbox -->
+        <div class="g-recaptcha" data-sitekey="6Lf8LuYrAAAAAOxgpLicFSm7HgA-x_pCQdvs7tbW"></div>
+
+        <button type="submit" class="!rounded-full w-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white py-3 text-lg font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition premium-button-hover">Send Me the Free Guide</button>
+      </form>
+      <div id="free-guide-success" class="hidden mt-8 text-center animate-fade-in">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <i class="ri-checkbox-circle-line text-4xl text-green-500 animate-pulse"></i>
+          <div class="text-2xl font-bold text-primary">Thank you!</div>
+          <div class="text-gray-700 text-lg">Your request has been received.<br>Check your email soon for your free guide.</div>
+        </div>
+      </div>
+      <div id="free-guide-error" class="hidden mt-8 text-center animate-fade-in">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <i class="ri-error-warning-line text-4xl text-red-500 animate-pulse"></i>
+          <div class="text-2xl font-bold text-primary">Oops!</div>
+          <div class="text-gray-700 text-lg">Something went wrong. Please try again later.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const fgForm = document.getElementById('free-guide-form');
+  const fgSuccess = document.getElementById('free-guide-success');
+  const fgError = document.getElementById('free-guide-error');
+  
+  if (fgForm && fgSuccess && fgError) {
+    fgForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Check if reCAPTCHA is completed
+if (grecaptcha.getResponse() === '') {
+  alert('Please confirm you are not a robot.');
+  submitBtn.textContent = originalBtnText;
+  submitBtn.disabled = false;
+  return; // stop the form from submitting
+}
+
+      
+      // Show loading state
+      const submitBtn = fgForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      
+      // Get form data
+      const formData = new FormData(fgForm);
+      
+      // Send data to Google Apps Script
+      fetch(fgForm.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+      .then(() => {
+        // Show success message
+        fgForm.classList.add('hidden');
+        fgSuccess.classList.remove('hidden');
+        fgError.classList.add('hidden');
+        fgForm.reset();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        fgError.classList.remove('hidden');
+      })
+      .finally(() => {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      });
+    });
+  }
+});
+</script>
+
+
+
+<!-- FAQ Section -->
+<section class="py-24 bg-gray-50" id="faq">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Frequently Asked Questions</h2>
+      <p class="text-xl text-gray-600 scroll-animate">Most common questions asked saving you time to dicuss more personal matters with us.</p>
+    </div>
+    <div class="max-w-3xl mx-auto space-y-6">
+      <!-- FAQ items (as in your original HTML) -->
+      <div class="bg-white p-6 rounded-xl premium-card-hover scroll-animate">
+        <button class="w-full flex items-center justify-between text-left">
+          <span class="text-lg font-medium">Do you provide tuition in other subjects like English or Science?</span>
+          <i class="ri-add-line text-xl text-primary"></i>
+        </button>
+        <div class="mt-4 text-gray-600 hidden">
+          Yes — alongside our online maths tutoring, we offer 1-to-1 English and Science tuition through subject specialists. This is only available when booked with maths lessons and supports KS3 to A-Level students.
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl premium-card-hover scroll-animate">
+        <button class="w-full flex items-center justify-between text-left">
+          <span class="text-lg font-medium">Can I enrol more than one child for tutoring?</span>
+          <i class="ri-add-line text-xl text-primary"></i>
+        </button>
+        <div class="mt-4 text-gray-600 hidden">
+          Absolutely! We support multiple siblings aged 11 to 19. Whether they are at different levels.
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl premium-card-hover scroll-animate">
+        <button class="w-full flex items-center justify-between text-left">
+          <span class="text-lg font-medium">What are your tutoring terms and conditions?</span>
+          <i class="ri-add-line text-xl text-primary"></i>
+        </button>
+        <div class="mt-4 text-gray-600 hidden">
+          You can find our full Terms & Conditions <a href="#" class="text-primary underline">[link here]</a>. We're also happy to explain them during a free consultation call so you understand how our online tutoring programmes work.
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl premium-card-hover scroll-animate">
+        <button class="w-full flex items-center justify-between text-left">
+          <span class="text-lg font-medium">Do you offer a free trial for your online maths tuition?</span>
+          <i class="ri-add-line text-xl text-primary"></i>
+        </button>
+        <div class="mt-4 text-gray-600 hidden">
+          No — instead of free trials (which often resulted in no-shows), we offer:<br><br>
+          <ul class="list-disc pl-6">
+            <li>Free downloadable maths revision guides</li>
+            <li>Free access to holiday booster sessions</li>
+          </ul>
+          <br>
+          These are a more effective way to experience our teaching style before enrolling in our paid tutoring.
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl premium-card-hover scroll-animate">
+        <button class="w-full flex items-center justify-between text-left">
+          <span class="text-lg font-medium">What is the cost of a trial tutoring session?</span>
+          <i class="ri-add-line text-xl text-primary"></i>
+        </button>
+        <div class="mt-4 text-gray-600 hidden">
+          We offer trial sessions:<br><br>
+          <ul class="list-disc pl-6">
+            <li>£25 for a 1-to-1 maths trial lesson</li>
+            <li>£15 for a small group maths trial</li>
+          </ul>
+          <br>
+          If you join us, this trial fee is credited toward your first month of tuition.
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl premium-card-hover scroll-animate">
+        <button class="w-full flex items-center justify-between text-left">
+          <span class="text-lg font-medium">What are your holiday maths programmes?</span>
+          <i class="ri-add-line text-xl text-primary"></i>
+        </button>
+        <div class="mt-4 text-gray-600 hidden">
+          We run seasonal online maths revision sessions during half terms and holidays. These focus on exam skills, tricky topics, and building confidence. We also offer one free online maths holiday camp every year.
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl premium-card-hover scroll-animate">
+        <button class="w-full flex items-center justify-between text-left">
+          <span class="text-lg font-medium">Do you tutor adult learners in maths?</span>
+          <i class="ri-add-line text-xl text-primary"></i>
+        </button>
+        <div class="mt-4 text-gray-600 hidden">
+          Yes — during quieter seasons (typically June to August), we help adults with:<br><br>
+          <ul class="list-disc pl-6">
+            <li>Functional Skills Maths</li>
+            <li>GCSE Maths Equivalency exams (for teacher training and career changes)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl premium-card-hover scroll-animate">
+        <button class="w-full flex items-center justify-between text-left">
+          <span class="text-lg font-medium">What curriculum do you follow for international students?</span>
+          <i class="ri-add-line text-xl text-primary"></i>
+        </button>
+        <div class="mt-4 text-gray-600 hidden">
+          We provide:<br><br>
+          <ul class="list-disc pl-6">
+            <li>Group tuition for IGCSE Higher Tier Maths</li>
+            <li>1-to-1 support for IGCSE Maths, Further Pure, Maths A, and Maths B</li>
+          </ul>
+          All aligned with international and UK-based exam boards.
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl premium-card-hover scroll-animate">
+        <button class="w-full flex items-center justify-between text-left">
+          <span class="text-lg font-medium">Which exam boards do you cover in your tutoring?</span>
+          <i class="ri-add-line text-xl text-primary"></i>
+        </button>
+        <div class="mt-4 text-gray-600 hidden">
+          We cover all major UK exam boards:<br><br>
+          <ul class="list-disc pl-6">
+            <li>1-to-1 tuition: Edexcel, AQA, OCR, OCR MEI, WJEC, Eduqas</li>
+            <li>Small group sessions: Edexcel, AQA, OCR</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="bg-white text-primary py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-bold mb-8 scroll-animate premium-text-glow">Ready to Level Up in Maths?</h2>
+    <button class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-8 py-3 text-lg font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow premium-button-hover">Book Your Free Call Now</button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-center mb-8">
+      <div class="flex space-x-6">
+        <a href="https://www.youtube.com/@MathTutorInsights" class="text-gray-400 hover:text-[#F70000] transition-colors duration-300 text-2xl">
+          <i class="ri-youtube-line"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/mathtutorinsights/" class="text-gray-400 hover:text-[#007AB5] transition-colors duration-300 text-2xl">
+          <i class="ri-linkedin-box-line"></i>
+        </a>
+        <a href="https://www.facebookht.com/share/1FFWoAc1KR/?mibextid=wwXIfr" class="text-gray-400 hover:text-[#5271ff] transition-colors duration-300 text-2xl">
+          <i class="ri-facebook-box-line"></i>
+        </a> 
+        <a href="https://wa.me/447840233236" class="text-gray-400 hover:text-[#25D366] transition-colors duration-300 text-2xl">
+  <i class="ri-whatsapp-line"></i>
+</a>
+      </div>
+    </div>
+        <center>
+        <br>
+        <h1>contact@mathtutorinsights.com</h1>
+        </br>
+        </center>
+    <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+      <p>Copyright © 2025 MathTutorInsights | Made with ❤ by <a href="https://www.instagram.com/halal.web/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#5271ff] transition-colors duration-300 font-medium">Halal web</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Go to Top Button -->
+<button id="goTopBtn" aria-label="Go to top">
+  <i class="ri-arrow-up-line"></i>
+</button>
+<script>
+// Go to Top button logic
+const goTopBtn = document.getElementById('goTopBtn');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200) {
+    goTopBtn.style.display = 'flex';
+  } else {
+    goTopBtn.style.display = 'none';
+  }
+});
+goTopBtn.addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('#faq .bg-white button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const answer = btn.parentElement.querySelector('div.mt-4');
+      if (answer) {
+        answer.classList.toggle('hidden');
+        // Optionally toggle icon
+        const icon = btn.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('ri-add-line');
+          icon.classList.toggle('ri-subtract-line');
+        }
+      }
+    });
+  });
+});
+</script>
+<script>
+// Premium Scroll Animations
+(function() {
+  const animatedClasses = [
+    'scroll-animate',
+    'scroll-slide-left',
+    'scroll-slide-right',
+    'scroll-scale',
+    'scroll-bounce'
+  ];
+  
+  const elements = [];
+  animatedClasses.forEach(cls => {
+    document.querySelectorAll('.' + cls).forEach(el => elements.push(el));
+  });
+  
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight * 0.8 &&
+      rect.bottom > 0
+    );
+  }
+  
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(() => {
+            entry.target.classList.add('animate');
+          });
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { 
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
+    
+    elements.forEach(el => {
+      if (isInViewport(el)) {
+        requestAnimationFrame(() => {
+          el.classList.add('animate');
+        });
+      } else {
+        observer.observe(el);
+      }
+    });
+  } else {
+    // Fallback for old browsers
+    elements.forEach(el => el.classList.add('animate'));
+  }
+})();
+</script>
+<!-- Calendly Modal (inline widget) -->
+<div id="calendly-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:1.5rem !important; overflow:hidden; max-width:95vw; width:400px; min-width:320px; height:700px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2); display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <button id="close-calendly-modal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:2rem; color:#5271ff; cursor:pointer; z-index:2;">&times;</button>
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-widget-rounded" style="width:100%;height:100%;border-radius:1.5rem !important;overflow:hidden;">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/mathtutorinsightss/tutoring" style="min-width:320px;height:700px;border-radius:1.5rem !important;overflow:hidden;"></div>
+    </div>
+    <!-- Calendly inline widget end -->
+  </div>
+</div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+// Calendly modal logic for all 'Book a call' buttons except excluded ones
+function openCalendlyModal() {
+  document.getElementById('calendly-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeCalendlyModal() {
+  document.getElementById('calendly-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  // Exclude buttons with text: 'Get Free Topic Tips', 'Send Me the Free Guide', 'See Student Results'
+  const allButtons = Array.from(document.querySelectorAll('button, a'));
+  allButtons.forEach(btn => {
+    const text = btn.textContent ? btn.textContent.trim().toLowerCase() : '';
+    if (
+      (text.includes('book') && text.includes('call')) ||
+      (btn.classList && btn.classList.contains('open-calendly'))
+    ) {
+      if (
+        !text.includes('free topic') &&
+        !text.includes('send me the free guide') &&
+        !text.includes('see student results')
+      ) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          openCalendlyModal();
+        });
+      }
+    }
+  });
+  // Close modal on close button
+  document.getElementById('close-calendly-modal').addEventListener('click', closeCalendlyModal);
+  // Optional: close modal when clicking outside the widget
+  document.getElementById('calendly-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeCalendlyModal();
+  });
+});
+</script>
+<!-- Summer Programme Apply Modal -->
+<div id="summer-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:1.5rem; max-width:95vw; width:400px; min-width:320px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:2rem;">
+    <button id="close-summer-modal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:2rem; color:#e53e3e; cursor:pointer; z-index:2;">&times;</button>
+    
+    <div id="summer-success" style="display:none; text-align:center; margin-top:1.5rem;">
+      <div style="font-size:2rem; color:#22c55e;">&#10003;</div>
+      <div style="font-size:1.25rem; font-weight:bold; color:#ea580c;">Thank you!</div>
+      <div style="color:#444;">Your application has been received.</div>
+    </div>
+  </div>
+</div>
+<script>
+// Summer Apply Modal logic
+const summerBtn = document.getElementById('apply-now-btn');
+const summerModal = document.getElementById('summer-modal');
+const summerClose = document.getElementById('close-summer-modal');
+const summerForm = document.getElementById('summer-form');
+const summerSuccess = document.getElementById('summer-success');
+if (summerBtn && summerModal && summerClose && summerForm && summerSuccess) {
+  summerBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    summerModal.style.display = 'flex';
+  });
+  summerClose.addEventListener('click', function() {
+    summerModal.style.display = 'none';
+    summerForm.style.display = '';
+    summerSuccess.style.display = 'none';
+  });
+  summerModal.addEventListener('click', function(e) {
+    if (e.target === this) {
+      summerModal.style.display = 'none';
+      summerForm.style.display = '';
+      summerSuccess.style.display = 'none';
+    }
+  });
+  summerForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    summerForm.style.display = 'none';
+    summerSuccess.style.display = 'block';
+  });
+}
+</script>
+<script>
+function applyCalendlyRounding() {
+  const calendlyModal = document.getElementById('calendly-modal');
+  if (!calendlyModal) return;
+  const iframe = calendlyModal.querySelector('iframe');
+  if (iframe) {
+    iframe.style.borderRadius = '1.5rem';
+    iframe.style.overflow = 'hidden';
+    iframe.setAttribute('style', (iframe.getAttribute('style') || '') + ';border-radius:1.5rem !important;overflow:hidden !important;');
+    if (iframe.parentElement) {
+      iframe.parentElement.style.borderRadius = '1.5rem';
+      iframe.parentElement.style.overflow = 'hidden';
+    }
+  }
+}
+function observeCalendlyIframe() {
+  const calendlyModal = document.getElementById('calendly-modal');
+  if (!calendlyModal) return;
+  const observer = new MutationObserver(() => {
+    applyCalendlyRounding();
+  });
+  observer.observe(calendlyModal, { childList: true, subtree: true });
+  calendlyModal._calendlyObserver = observer;
+}
+function disconnectCalendlyObserver() {
+  const calendlyModal = document.getElementById('calendly-modal');
+  if (calendlyModal && calendlyModal._calendlyObserver) {
+    calendlyModal._calendlyObserver.disconnect();
+    calendlyModal._calendlyObserver = null;
+  }
+}
+document.addEventListener('DOMContentLoaded', function() {
+  const calendlyModal = document.getElementById('calendly-modal');
+  const openBtns = Array.from(document.querySelectorAll('button, a')).filter(btn => {
+    const text = btn.textContent ? btn.textContent.trim().toLowerCase() : '';
+    return (
+      (text.includes('book') && text.includes('call')) ||
+      (btn.classList && btn.classList.contains('open-calendly'))
+    ) && !text.includes('free topic') && !text.includes('send me the free guide') && !text.includes('see student results');
+  });
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      setTimeout(() => {
+        applyCalendlyRounding();
+        observeCalendlyIframe();
+      }, 200);
+    });
+  });
+  document.getElementById('close-calendly-modal').addEventListener('click', disconnectCalendlyObserver);
+  calendlyModal.addEventListener('click', function(e) {
+    if (e.target === calendlyModal) disconnectCalendlyObserver();
+  });
+});
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</body>
+</html>

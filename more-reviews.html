@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More Reviews | Math Tutor Insights</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="icon" type="image/png" href="logo.png">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+  <!-- Header (copied from index.html) -->
+  <nav class="fixed top-0 left-0 right-0 bg-white z-50 w-full">
+    <div class="px-4 sm:px-6 lg:px-8 w-full">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center">
+          <img src="logo.png" alt="Math Tutor Insights Logo" class="h-16 w-auto mr-2">
+        </a>
+        <div class="hidden md:flex space-x-12">
+          <a href="index.html" class="text-gray-600 font-bold force-brand-hover">Home</a>
+          <a href="index.html#about" class="text-gray-600 font-bold force-brand-hover">About</a>
+          <a href="index.html#services" class="text-gray-600 font-bold force-brand-hover">Services</a>
+          <a href="index.html#testimonials" class="text-gray-600 font-bold force-brand-hover">Testimonials</a>
+          <a href="more-reviews.html" class="text-gray-600 font-bold force-brand-hover">Results</a>
+          <a href="index.html#faq" class="text-gray-600 font-bold force-brand-hover">FAQs</a>
+        </div>
+        <button type="button" class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-8 py-3 text-sm font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition hidden md:inline-block open-calendly">Book a Free Call</button>
+        <button id="mobile-menu-toggle" class="md:hidden ml-4 text-3xl text-primary focus:outline-none">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-white shadow-lg rounded-b-xl px-6 py-4 absolute left-0 right-0 top-20 z-40">
+        <a href="index.html" class="block text-gray-600 font-bold force-brand-hover">Home</a>
+        <a href="index.html#about" class="block text-gray-600 font-bold force-brand-hover">About</a>
+        <a href="index.html#services" class="block text-gray-600 font-bold force-brand-hover">Services</a>
+        <a href="index.html#testimonials" class="block text-gray-600 font-bold force-brand-hover">Testimonials</a>
+        <a href="more-reviews.html" class="block text-gray-600 font-bold force-brand-hover">Results</a>
+        <a href="index.html#faq" class="block text-gray-600 font-bold force-brand-hover">FAQs</a>
+        <button type="button" class="w-full !rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-8 py-3 text-sm font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition mt-2 open-calendly">Book a Call</button>
+      </div>
+    </div>
+  </nav>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('mobile-menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('hidden');
+      });
+      menu.querySelectorAll('a,button').forEach(el => {
+        el.addEventListener('click', () => menu.classList.add('hidden'));
+      });
+    });
+  </script>
+  
+  
+  <!-- Reviews Images Gallery -->
+  <section class="max-w-6xl w-full mx-auto mt-16 mb-8 pt-32">
+        <div class="text-center mb-16">
+    <div class="text-center mb-16">
+<div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">More results from students and group classes</h2>
+      <p class="text-xl text-gray-600 scroll-animate">Click on image to zoom in</p>
+    </div>
+    <!--  1st : 2 columns, centered, with captions -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center mt-10">
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/1stimg.jpg" alt="Before" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center"></p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/7th A-level maths student grade.png" alt="After" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center"></p>
+      </div>
+    </div>
+    <!-- top 1st : 2 columns, centered, with captions -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center mt-10">
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/top 1st.jpeg" alt="Before" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center">2025 Results Day</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/top2nd.jpeg" alt="After" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center">2025 Results Day</p>
+      </div>
+    </div>
+    <!-- top 2nd : 2 columns, centered, with captions -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center mt-10">
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/isabel before A.jpg" alt="Before" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center">Before</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/top4th.jpeg" alt="After" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center">After 2025 Results Day</p>
+      </div>
+    </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/1st A-level maths student grade.png" alt="A-level maths student grade" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/2nd GCSE maths student grade.png" alt="GCSE maths student grade" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/3rd A-level maths student grade.png" alt="A-level maths student grade" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+      </div>
+    </div>
+    <!-- Second row: 2 columns, centered, with captions -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center mt-10">
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/WASIF BEFORE.jpg" alt="Before" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center">Before</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/6th gcse or a-level maths student grade.png" alt="After" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center">After</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center mt-10">
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/4th GCSE maths student grade.png" alt="Before" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center">Before</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+        <img src="reviews imgs/5th GCSE maths student grade .png" alt="After" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        <p class="mt-4 text-lg font-semibold text-center">After</p>
+      </div>
+    </div>
+      <!-- Third and fourth rows: 3 columns, with captions for 9th, 10th, 11th -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10">
+        
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center justify-between h-full transition hover:shadow-2xl hover:-translate-y-1">
+          <img src="reviews imgs/9th A-level maths student grade.png" alt="A-level maths student grade" class="w-full object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+          <p class="mt-4 text-lg font-semibold text-center">Before</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center justify-between h-full transition hover:shadow-2xl hover:-translate-y-1">
+          <img src="reviews imgs/10th A-level maths student grade.png" alt="A-level maths student grade" class="w-full object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+          <p class="mt-4 text-lg font-semibold text-center">Test Feedback</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center justify-between h-full transition hover:shadow-2xl hover:-translate-y-1">
+          <img src="reviews imgs/11th A-level maths student grade.png" alt="A-level maths student grade" class="w-full object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+          <p class="mt-4 text-lg font-semibold text-center">After</p>
+        </div>
+      </div>
+      <!-- Fifth row: 2 columns, centered, no captions -->
+      
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10">
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 transition hover:shadow-2xl hover:-translate-y-1">
+          <img src="reviews imgs/12th gcse or a-level maths student grade.png" alt="GCSE or A-level maths student grade" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 transition hover:shadow-2xl hover:-translate-y-1">
+          <img src="reviews imgs/13th gcse or a-level maths student grade.png" alt="A-level maths student grade" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 transition hover:shadow-2xl hover:-translate-y-1">
+          <img src="reviews imgs/8th GCSE or A-level maths student grade.png" alt="GCSE or A-level maths student grade" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        </div>
+    <!-- Minimalist Modal for image preview -->
+    <div id="imgModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+      <span class="absolute top-6 right-10 text-white text-4xl cursor-pointer select-none" onclick="closeModal()">&times;</span>
+      <img id="modalImg" src="" alt="Preview" class="max-h-[90vh] max-w-[90vw]" />
+    </div>
+    <script>
+      function openModal(img) {
+        document.getElementById('imgModal').classList.remove('hidden');
+        document.getElementById('modalImg').src = img.src;
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        document.getElementById('imgModal').classList.add('hidden');
+        document.getElementById('modalImg').src = '';
+        document.body.style.overflow = '';
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+      });
+      document.getElementById('imgModal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+      });
+    </script>
+  </section>
+  <!-- End Reviews Images Gallery -->
+  <!-- Live Group lesson Reviews Section -->
+  <div class="text-center mb-16 mt-16">
+    <h3 class="text-3xl font-bold mb-8 scroll-animate premium-text-glow">Live Group lesson Reviews</h3>
+    <div class="max-w-6xl w-full mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-center">
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+          <img src="live session/group feedback.jpg" alt="Group Feedback" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+          <img src="live session/lesson 2 feedback.png" alt="Lesson 2 Feedback" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+          <img src="live session/money scheme.png" alt="Money Scheme" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Live Group lesson Reviews Section -->
+  <!-- Ready to Level Up Section -->
+  <section class="bg-white text-primary py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-8 scroll-animate premium-text-glow">Ready to Level Up in Maths?</h2>
+      <button type="button" class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-8 py-3 text-lg font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow premium-button-hover open-calendly">Book Your Free Call Now</button>
+    </div>
+  </section>
+  <!-- Footer (copied from index.html) -->
+  <footer class="bg-gray-900 text-white py-12 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-center mb-8">
+        <div class="flex space-x-6">
+          <a href="https://www.youtube.com/@MathTutorInsights" class="text-gray-400 hover:text-[#F70000] transition-colors duration-300 text-2xl">
+            <i class="ri-youtube-line"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/mathtutorinsights/" class="text-gray-400 hover:text-[#007AB5] transition-colors duration-300 text-2xl">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+          <a href="https://www.facebook.com/share/1FFWoAc1KR/?mibextid=wwXIfr" class="text-gray-400 hover:text-[#5271ff] transition-colors duration-300 text-2xl">
+            <i class="ri-facebook-box-line"></i>
+          </a>
+          <a href="https://wa.me/447840233236" class="text-gray-400 hover:text-[#25D366] transition-colors duration-300 text-2xl">
+  <i class="ri-whatsapp-line"></i>
+</a>
+        </div>
+      </div>
+      <center>
+        <br>
+        <h1>contact@mathtutorinsights.com</h1>
+        </br>
+        </center>
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <p>Copyright © 2025 MathTutorInsights | Made with ❤ by <a href="https://www.instagram.com/halal.web/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#5271ff] transition-colors duration-300 font-medium">Halal web</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- Go to Top Button -->
+  <button id="goTopBtn" aria-label="Go to top" style="display:none;" class="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white rounded-full shadow-lg w-14 h-14 flex items-center justify-center text-3xl transition-all duration-300 hover:from-[#38b6ff] hover:to-[#5271ff] hover:shadow-2xl">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+  <script>
+    // Go to Top button logic
+    const goTopBtn = document.getElementById('goTopBtn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 200) {
+        goTopBtn.style.display = 'flex';
+      } else {
+        goTopBtn.style.display = 'none';
+      }
+    });
+    goTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <div id="calendly-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:1rem;max-width:95vw;width:400px;min-width:320px;height:700px;position:relative;box-shadow:0 8px 32px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;">
+    <button id="calendly-close" style="position:absolute;top:8px;right:16px;font-size:2rem;background:none;border:none;cursor:pointer;z-index:10;">&times;</button>
+    <div id="calendly-inline-widget" style="width:100%;height:100%;"></div>
+  </div>
+</div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+function openCalendlyModal() {
+  var modal = document.getElementById('calendly-modal');
+  var widget = document.getElementById('calendly-inline-widget');
+  if (widget.innerHTML.trim() === '') {
+    Calendly.initInlineWidget({ url: 'https://calendly.com/mathtutorinsightss/tutoring', parentElement: widget, prefill: {}, utm: {} });
+  }
+  modal.style.display = 'flex';
+}
+function closeCalendlyModal() {
+  var modal = document.getElementById('calendly-modal');
+  var widget = document.getElementById('calendly-inline-widget');
+  modal.style.display = 'none';
+  widget.innerHTML = '';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.open-calendly').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openCalendlyModal();
+    });
+  });
+  document.getElementById('calendly-close').addEventListener('click', closeCalendlyModal);
+  document.getElementById('calendly-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeCalendlyModal();
+  });
+});
+</script>
+</body>
+</html> 
