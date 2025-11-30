@@ -243,28 +243,49 @@
         </br>
         </center>
       <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-        <p>Copyright © 2025 MathTutorInsights | Made with ❤ by <a href="https://www.instagram.com/halal.web/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#5271ff] transition-colors duration-300 font-medium">Halal web</a></p>
+        <p>Copyright © 2025 MathTutorInsights</p>
       </div>
     </div>
   </footer>
-  <!-- Go to Top Button -->
-  <button id="goTopBtn" aria-label="Go to top" style="display:none;" class="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white rounded-full shadow-lg w-14 h-14 flex items-center justify-center text-3xl transition-all duration-300 hover:from-[#38b6ff] hover:to-[#5271ff] hover:shadow-2xl">
-    <i class="ri-arrow-up-line"></i>
-  </button>
-  <script>
-    // Go to Top button logic
-    const goTopBtn = document.getElementById('goTopBtn');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 200) {
-        goTopBtn.style.display = 'flex';
-      } else {
-        goTopBtn.style.display = 'none';
-      }
-    });
-    goTopBtn.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  <!-- WhatsApp Floating Button -->
+<a 
+  href="https://wa.me/447840233236?text=Hi%2C%20I%27m%20interested%20in%20maths%20tutoring%20for%20my%20child.%20Can%20we%20discuss%20the%20programmes%3F" 
+  target="_blank"
+  rel="noopener noreferrer"
+  class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:bg-[#128C7E] hover:shadow-2xl hover:scale-110"
+  aria-label="Contact us on WhatsApp"
+>
+  <i class="ri-whatsapp-line"></i>
+</a>
+
+<style>
+/* WhatsApp Button Animation for more-reviews page */
+.fixed.bg-\[#25D366\] {
+  animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+}
+
+.fixed.bg-\[#25D366\]:hover {
+  animation: none;
+}
+
+@media (max-width: 768px) {
+  .fixed.bg-\[#25D366\] {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+</style>
   <div id="calendly-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;">
   <div style="background:#fff;border-radius:1rem;max-width:95vw;width:400px;min-width:320px;height:700px;position:relative;box-shadow:0 8px 32px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;">
     <button id="calendly-close" style="position:absolute;top:8px;right:16px;font-size:2rem;background:none;border:none;cursor:pointer;z-index:10;">&times;</button>

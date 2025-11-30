@@ -334,34 +334,6 @@ body { font-family: 'Inter', sans-serif; }
   transition: color 0.2s;
 }
 
-/* Go to Top button styles */
-#goTopBtn {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 50;
-  display: none;
-  background: linear-gradient(90deg, #5271ff 0%, #38b6ff 100%);
-  color: #fff;
-  border-radius: 9999px;
-  box-shadow: 0 4px 16px rgba(82,113,255,0.15);
-  width: 3.5rem;
-  height: 3.5rem;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#goTopBtn:hover {
-  background: linear-gradient(90deg, #38b6ff 0%, #5271ff 100%);
-  box-shadow: 0 6px 24px rgba(82,113,255,0.25);
-  transform: translateY(-2px) scale(1.1);
-}
-
 /* Premium text effects */
 .premium-text-glow {
   text-shadow: 0 0 20px rgba(82,113,255,0.3);
@@ -393,6 +365,33 @@ body { font-family: 'Inter', sans-serif; }
 /* Allow badge to overflow only for service cards */
 .service-card-fix {
   overflow: visible !important;
+}
+/* WhatsApp Button Styles */
+#whatsappBtn {
+  animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+}
+
+#whatsappBtn:hover {
+  animation: none;
+}
+
+/* Responsive positioning */
+@media (max-width: 768px) {
+  #whatsappBtn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 </style>
 </head>
@@ -968,70 +967,6 @@ body { font-family: 'Inter', sans-serif; }
   </div>
 </section>
 
-<!-- Programme Pillars Section with Rectangular Images -->
-<section class="bg-white py-20" id="pillars">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Our 4 Programme Pillars for Student Success</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-visible">
-
-      <!-- Pillar 1: Problem Awareness -->
-      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Pillar 1</span>
-        <div class="flex-1 text-center mt-6">
-          <img src="https://i.pinimg.com/736x/91/c9/fe/91c9fe894c22dfe20d272ffd73db8225.jpg" alt="Problem Awareness" class="w-full h-36 object-cover mb-4 rounded-lg shadow-md">
-          <h3 class="text-lg font-bold mb-2 text-gray-800">Problem Awareness</h3>
-          <p class="text-sm text-gray-700"> Your child is stuck and not sure why.
- Our short skills check finds root causes for missing methods,
- confusing exam words and low confidence. Clear targets
- provided to begin the journey of progress</p>
-        </div>
-      </div>
-
-      <!-- Pillar 2: Academic & Human Connection -->
-      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Pillar 2</span>
-        <div class="flex-1 text-center mt-6">
-          <img src="https://i.pinimg.com/1200x/7d/36/1d/7d361dc416f454cdefa1216431f97893.jpg" alt="Academic & Human Connection" class="w-full h-36 object-cover mb-4 rounded-lg shadow-md">
-          <h3 class="text-lg font-bold mb-2 text-gray-800">Academic & Human Connection</h3>
-          <p class="text-sm text-gray-700"> We reconnect the dots so maths feels smaller and
- clearer. Your child opens up, shares worries, and
- feels heard. They no longer feel alone or lost seeing
- how topics link</p>
-        </div>
-      </div>
-
-      <!-- Pillar 3: Topic Acceleration -->
-      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Pillar 3</span>
-        <div class="flex-1 text-center mt-6">
-          <img src="https://i.pinimg.com/736x/2a/e7/c4/2ae7c4c3eb36b2527bafdff0235d4f12.jpg" alt="Topic Acceleration" class="w-full h-36 object-cover mb-4 rounded-lg shadow-md">
-          <h3 class="text-lg font-bold mb-2 text-gray-800">Topic Acceleration</h3>
-          <p class="text-sm text-gray-700"> From topic practice to full exam papers.
- Variation meets accuracy and speed, so your child can answer any
- question style within every topic with time to check workings.</p>
-        </div>
-      </div>
-
-      <!-- Pillar 4: Grade Retention -->
-      <div class="relative group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow p-6 flex flex-col h-full border border-blue-100 service-card-fix transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white text-xs font-semibold px-4 py-1 rounded-full shadow-lg z-10 overflow-visible">Pillar 4</span>
-        <div class="flex-1 text-center mt-6">
-          <img src="https://i.pinimg.com/736x/93/8d/51/938d51c8291f006b0146aa7e8dda7b5f.jpg" alt="Grade Retention" class="w-full h-36 object-cover mb-4 rounded-lg shadow-md">
-          <h3 class="text-lg font-bold mb-2 text-gray-800">Grade Retention</h3>
-          <p class="text-sm text-gray-700">Improved grades from our mocks
- carry over to school mocks moving up at least 3
- grades</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
 <!-- Our Services Section -->
 <section class="bg-white py-20" id="services">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1128,12 +1063,21 @@ body { font-family: 'Inter', sans-serif; }
     <div class="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-2xl p-10 text-center border-2 border-blue-100 scroll-animate premium-card-hover">
       <div class="mb-6">
         <h3 class="text-3xl font-bold text-gray-900 mb-4">Not Sure Which Programme Suits Your Child?</h3>
-        <p class="text-lg text-gray-700 leading-relaxed">Book a <strong class="text-primary">FREE 15-minute assessment call</strong>—no obligation, no pressure. We'll discuss your child's current situation and help you choose the best fit.</p>
-      </div>
-      
-      <button class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-10 py-4 text-xl font-bold hover:from-[#38b6ff] hover:to-[#5271ff] shadow-lg transition premium-button-hover open-calendly">
-        Book Your Free Assessment Call →
-      </button>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">Book a <strong class="text-primary">FREE 15-minute assessment call</strong>. We'll discuss your child's current situation and help you choose the best fit.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+  <button class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-10 py-4 text-xl font-bold hover:from-[#38b6ff] hover:to-[#5271ff] shadow-lg transition premium-button-hover open-calendly w-full sm:w-auto">
+    Book Your Free Assessment Call →
+  </button>
+  <a 
+    href="https://wa.me/966545509259?text=Hi%2C%20I%27m%20interested%20in%20maths%20tutoring%20for%20my%20child.%20Can%20we%20discuss%20the%20programmes%3F" 
+    target="_blank"
+    rel="noopener noreferrer"
+    class="!rounded-full bg-[#25D366] text-white px-8 py-4 text-lg font-semibold hover:bg-[#128C7E] shadow-lg transition flex items-center justify-center gap-2 premium-button-hover w-full sm:w-auto"
+  >
+    <i class="ri-whatsapp-line text-xl"></i>
+    Message on WhatsApp
+  </a>
+</div>
       
       <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
         <div class="flex items-start gap-3">
@@ -1453,29 +1397,22 @@ if (grecaptcha.getResponse() === '') {
         </br>
         </center>
     <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-      <p>Copyright © 2025 MathTutorInsights | Made with ❤ by <a href="https://www.instagram.com/halal.web/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#5271ff] transition-colors duration-300 font-medium">Halal web</a></p>
+      <p>Copyright © 2025 MathTutorInsights</p>
     </div>
   </div>
 </footer>
 
-<!-- Go to Top Button -->
-<button id="goTopBtn" aria-label="Go to top">
-  <i class="ri-arrow-up-line"></i>
-</button>
-<script>
-// Go to Top button logic
-const goTopBtn = document.getElementById('goTopBtn');
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 200) {
-    goTopBtn.style.display = 'flex';
-  } else {
-    goTopBtn.style.display = 'none';
-  }
-});
-goTopBtn.addEventListener('click', function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-</script>
+<!-- WhatsApp Floating Button -->
+<a 
+  href="https://wa.me/447840233236?text=Hi%2C%20I%27m%20interested%20in%20maths%20tutoring%20for%20my%20child.%20Can%20we%20discuss%20the%20programmes%3F" 
+  target="_blank"
+  rel="noopener noreferrer"
+  id="whatsappBtn" 
+  class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:bg-[#128C7E] hover:shadow-2xl hover:scale-110"
+  aria-label="Contact us on WhatsApp"
+>
+  <i class="ri-whatsapp-line"></i>
+</a>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('#faq .bg-white button').forEach(function(btn) {
