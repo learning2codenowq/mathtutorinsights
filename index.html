@@ -681,42 +681,52 @@ body { font-family: 'Inter', sans-serif; }
   I also played professional basketball as a teenager, which shaped my coaching style, disciplined, focused, and built on trust. When parents see their child finally "get it" after months of frustration, they understand why I've dedicated 13+ years to this work.
 </p>
       </div>
-<!-- Trust Credentials with Actual Documents -->
+<!-- Trust Credentials - Icon Based Design -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-8">
   
   <!-- DBS Certificate -->
-  <div class="bg-white border-2 border-green-100 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition group cursor-pointer" onclick="openCredentialModal('dbs')">
-    <div class="overflow-hidden rounded-lg border-4 border-gray-800 shadow-lg mb-4 group-hover:scale-105 transition-transform duration-300">
-      <img src="credentials/dbs-certificate.jpg" alt="DBS Enhanced Certificate" class="w-full h-48 object-cover">
+  <div class="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+      <i class="ri-shield-check-line text-white text-4xl"></i>
     </div>
-    <h3 class="font-bold text-gray-900 mb-2 flex items-center justify-center gap-2">
-      <i class="ri-shield-check-line text-green-600"></i>
-      DBS Enhanced Check
-    </h3>
-    <p class="text-sm text-gray-600">Fully vetted and certified to work with young people</p>
-    <p class="text-xs text-primary mt-2 font-medium">Click to view certificate</p>
+    <h3 class="font-bold text-gray-900 mb-3 text-xl">DBS Enhanced Check</h3>
+    <p class="text-sm text-gray-700 leading-relaxed">Fully vetted and certified to work with young people</p>
+    <div class="mt-4 pt-4 border-t border-green-200">
+      <div class="flex items-center justify-center gap-2 text-green-700">
+        <i class="ri-checkbox-circle-line text-lg"></i>
+        <span class="text-xs font-medium">Verified & Current</span>
+      </div>
+    </div>
   </div>
   
   <!-- Degree Certificate -->
-  <div class="bg-white border-2 border-blue-100 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition group cursor-pointer" onclick="openCredentialModal('degree')">
-    <div class="overflow-hidden rounded-lg border-4 border-gray-800 shadow-lg mb-4 group-hover:scale-105 transition-transform duration-300">
-      <img src="credentials/degree.jpeg" alt="Coventry University Degree" class="w-full h-48 object-cover">
+  <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+      <i class="ri-graduation-cap-line text-white text-4xl"></i>
     </div>
-    <h3 class="font-bold text-gray-900 mb-2 flex items-center justify-center gap-2">
-      <i class="ri-graduation-cap-line text-blue-600"></i>
-      BSc Mathematics (2:1)
-    </h3>
-    <p class="text-sm text-gray-600">Coventry University - Including year in industry</p>
-    <p class="text-xs text-primary mt-2 font-medium">Click to view certificate</p>
+    <h3 class="font-bold text-gray-900 mb-3 text-xl">BSc Mathematics (2:1)</h3>
+    <p class="text-sm text-gray-700 leading-relaxed">Coventry University - Including year in industry</p>
+    <div class="mt-4 pt-4 border-t border-blue-200">
+      <div class="flex items-center justify-center gap-2 text-blue-700">
+        <i class="ri-checkbox-circle-line text-lg"></i>
+        <span class="text-xs font-medium">Honours Degree</span>
+      </div>
+    </div>
   </div>
   
-  <!-- 13+ Years Experience (Keep as Icon) -->
-  <div class="bg-white border-2 border-purple-100 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
-    <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4">
-      <i class="ri-time-line text-3xl text-purple-600"></i>
+  <!-- 13+ Years Experience -->
+  <div class="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+      <i class="ri-time-line text-white text-4xl"></i>
     </div>
-    <h3 class="font-bold text-gray-900 mb-2">13+ Years Experience</h3>
-    <p class="text-sm text-gray-600">Over 1,500 hours of proven teaching success</p>
+    <h3 class="font-bold text-gray-900 mb-3 text-xl">13+ Years Experience</h3>
+    <p class="text-sm text-gray-700 leading-relaxed">Over 1,500 hours of proven teaching success</p>
+    <div class="mt-4 pt-4 border-t border-purple-200">
+      <div class="flex items-center justify-center gap-2 text-purple-700">
+        <i class="ri-checkbox-circle-line text-lg"></i>
+        <span class="text-xs font-medium">500+ Students Helped</span>
+      </div>
+    </div>
   </div>
   
 </div>
@@ -727,47 +737,6 @@ body { font-family: 'Inter', sans-serif; }
     Start Improving Grades (Free Call)
   </button>
 </div>
-    </div>
-  </div>
-</section>
-<!-- Credential Modal -->
-<div id="credentialModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden p-4" onclick="closeCredentialModal()">
-  <div class="relative max-w-4xl w-full">
-    <button class="absolute -top-12 right-0 text-white text-4xl hover:text-gray-300 transition" onclick="closeCredentialModal()">&times;</button>
-    <img id="credentialImage" src="" alt="Certificate" class="w-full h-auto rounded-lg shadow-2xl">
-  </div>
-</div>
-
-<script>
-function openCredentialModal(type) {
-  const modal = document.getElementById('credentialModal');
-  const img = document.getElementById('credentialImage');
-  
-  if (type === 'dbs') {
-    img.src = 'credentials/dbs-certificate.jpg';
-    img.alt = 'DBS Enhanced Certificate';
-  } else if (type === 'degree') {
-    img.src = 'credentials/degree.jpeg';
-    img.alt = 'Coventry University Degree';
-  }
-  
-  modal.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeCredentialModal() {
-  const modal = document.getElementById('credentialModal');
-  modal.classList.add('hidden');
-  document.body.style.overflow = '';
-}
-
-// Close modal on Escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeCredentialModal();
-  }
-});
-</script>
 <!-- Proven Results Preview Section -->
 <section class="py-24 bg-white" id="results-preview">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1131,7 +1100,7 @@ document.addEventListener('keydown', function(e) {
     <div class="max-w-4xl mx-auto mt-16 bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-2xl p-10 text-center border-2 border-blue-100 scroll-animate premium-card-hover">
       <div class="mb-6">
         <h3 class="text-3xl font-bold text-gray-900 mb-4">Not Sure Which Programme Suits Your Child?</h3>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">Book a <strong class="text-primary">FREE 15-minute assessment call</strong>. We'll discuss your child's current situation and help you choose the best fit.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">Book a <strong class="text-primary">FREE 20 minute assessment call</strong>. We'll discuss your child's current situation and help you choose the best fit.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
   <button class="!rounded-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white px-10 py-4 text-xl font-bold hover:from-[#38b6ff] hover:to-[#5271ff] shadow-lg transition premium-button-hover open-calendly w-full sm:w-auto">
     Book Your Free Assessment Call →
