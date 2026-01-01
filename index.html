@@ -1044,8 +1044,8 @@ body { font-family: 'Inter', sans-serif; }
           <h3 class="text-lg font-bold mb-2 text-gray-800">GCSE Grade 8 to 9 Maths Programme</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">Secure top grades for full range of offers across A-level Subjects.</p>
           <div class="mb-4">
-            <p class="text-sm text-gray-700 font-medium">upfront: <span class="font-bold">£550</span></p>
-            <p class="text-sm text-gray-700">or <span class="font-bold">£750</span> installment</p>
+            <p class="text-sm text-gray-700 font-medium">Price: <span class="font-bold">£550 upfront</span></p>
+            <p class="text-sm text-gray-700">or <span class="font-bold">£750</span> installments</p>
           </div>
         </div>
       </div>
@@ -1060,7 +1060,7 @@ body { font-family: 'Inter', sans-serif; }
           <h3 class="text-lg font-bold mb-2 text-gray-800">IGCSE Grade 7 to 9 Maths Programme</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">Become an above average students with average grades and deeper understanding.</p>
           <div class="mb-4">
-            <p class="text-sm text-gray-700 font-medium">Upfront: <span class="font-bold">£550</span></p>
+            <p class="text-sm text-gray-700 font-medium">Price: <span class="font-bold">£550 upfront</span></p>
             <p class="text-sm text-gray-700">or <span class="font-bold">£750</span> in installments</p>
           </div>
         </div>
@@ -1076,8 +1076,8 @@ body { font-family: 'Inter', sans-serif; }
           <h3 class="text-lg font-bold mb-2 text-gray-800">AS/A2 Level Maths Programme</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">Move up 3 grades across Pure and Applied Maths combined</p>
           <div class="mb-4">
-            <p class="text-sm text-gray-700 font-medium">Upfront: <span class="font-bold">£550</span></p>
-            <p class="text-sm text-gray-700">or <span class="font-bold">£750</span> in Installment</p>
+            <p class="text-sm text-gray-700 font-medium">Price: <span class="font-bold">£550 upfront</span></p>
+            <p class="text-sm text-gray-700">or <span class="font-bold">£750</span> in Installments</p>
           </div>
         </div>
       </div>
@@ -1166,7 +1166,7 @@ body { font-family: 'Inter', sans-serif; }
     </div>
     <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-2xl premium-card-hover animate-float">
       <h3 class="text-xl font-bold mb-6 text-primary text-center">KS3 To A-Level Maths Topic Guide</h3>
-      <form id="free-guide-form" class="space-y-6" action="https://script.google.com/macros/s/AKfycbyaZ7FVl9Mx8cNm_87_J5__kLKrqRRmg63TZeth-VkHEsF5GKJbiurB0TlSBorpFJjc/exec" method="POST">
+      <form id="free-guide-form" class="space-y-6" action="https://script.google.com/macros/s/AKfycbzB2vDiMC6Wy5FGH5_SqXpG4QABmh6JelT_UQUuDO9ykPi3N58MFwZLJTiBDIOgKiAO/exec" method="POST">
         <input type="hidden" name="form-name" value="free-guide">
         <div>
           <label for="fg-name" class="block text-gray-700 font-medium mb-1">Your Name</label>
@@ -1249,25 +1249,32 @@ if (grecaptcha.getResponse() === '') {
       
       // Send data to Google Apps Script
       fetch(fgForm.action, {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-      })
-      .then(() => {
-        // Show success message
-        fgForm.classList.add('hidden');
-        fgSuccess.classList.remove('hidden');
-        fgError.classList.add('hidden');
-        fgForm.reset();
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        fgError.classList.remove('hidden');
-      })
-      .finally(() => {
-        submitBtn.textContent = originalBtnText;
-        submitBtn.disabled = false;
-      });
+  method: 'POST',
+  body: formData
+})
+.then(response => response.json())
+.then(data => {
+  if (data.result === 'success') {
+    // Show success message
+    fgForm.classList.add('hidden');
+    fgSuccess.classList.remove('hidden');
+    fgError.classList.add('hidden');
+    fgForm.reset();
+    grecaptcha.reset();
+  } else {
+    throw new Error('Failed to send');
+  }
+})
+.catch(error => {
+  console.error('Error:', error);
+  fgError.classList.remove('hidden');
+  submitBtn.textContent = originalBtnText;
+  submitBtn.disabled = false;
+})
+.finally(() => {
+  submitBtn.textContent = originalBtnText;
+  submitBtn.disabled = false;
+});
     });
   }
 });
