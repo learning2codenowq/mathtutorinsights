@@ -105,17 +105,62 @@
         <p class="mt-4 text-lg font-semibold text-center">2025 Results Day</p>
       </div>
     </div>
-    <!-- top 2nd : 2 columns, centered, with captions -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center mt-10">
-      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
-        <img src="reviews imgs/isabel before A.jpg" alt="Before" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
-        <p class="mt-4 text-lg font-semibold text-center">Before</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
-        <img src="reviews imgs/top4th.jpeg" alt="After" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
-        <p class="mt-4 text-lg font-semibold text-center">After 2025 Results Day</p>
+    <!-- Issy's A-Level Journey: Before & After -->
+<div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-2xl border-2 border-blue-200 p-8 mt-10 mb-10">
+  <!-- Student Name & Title -->
+  <div class="text-center mb-8">
+    <h3 class="text-3xl font-bold text-gray-900 mb-2">Issy's A-Level Maths Journey</h3>
+    <p class="text-xl text-gray-700">From Grade E to Grade A | Accepted to Bath University</p>
+    <div class="flex items-center justify-center gap-2 mt-3">
+      <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full font-semibold text-sm">Started: Grade E</span>
+      <i class="ri-arrow-right-line text-2xl text-gray-400"></i>
+      <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full font-semibold text-sm">Achieved: Grade A</span>
+    </div>
+  </div>
+
+  <!-- Before & After Images Side by Side -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-6">
+    <!-- Before -->
+    <div class="bg-white rounded-2xl shadow-xl border-2 border-red-200 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+      <div class="bg-red-500 text-white px-4 py-1 rounded-full font-bold text-sm mb-4">BEFORE</div>
+      <img src="reviews imgs/isabel before A.jpg" alt="Issy Before - Grade E in A-Level Mechanics and Statistics" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+      <div class="mt-4 text-center">
+        <p class="text-lg font-bold text-red-700">Start: Grade E</p>
+        <p class="text-sm text-gray-600">A-Level Mechanics & Statistics</p>
       </div>
     </div>
+    
+    <!-- After -->
+    <div class="bg-white rounded-2xl shadow-xl border-2 border-green-200 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+      <div class="bg-green-500 text-white px-4 py-1 rounded-full font-bold text-sm mb-4">AFTER</div>
+      <img src="reviews imgs/top4th.jpeg" alt="Issy After - Grade A in A-Level Maths, Accepted to Bath University" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+      <div class="mt-4 text-center">
+        <p class="text-lg font-bold text-green-700">Result: Grade A ⭐</p>
+        <p class="text-sm text-gray-600">Accepted to Bath University</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Story Summary -->
+  <div class="bg-white rounded-xl p-6 border-2 border-blue-100">
+    <div class="flex items-start gap-4">
+      <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+        <i class="ri-trophy-line text-white text-2xl"></i>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-gray-900 mb-2">The Transformation</h4>
+        <p class="text-gray-700 leading-relaxed">
+          Issy started with a Grade E in A-Level Mechanics and Statistics during her mock exams. Through dedicated tutoring focused on building strong foundations in Pure Maths and addressing gaps in her understanding, she achieved a solid Grade A (248/300) in her final exams. Her success demonstrates that with the right support and teaching approach, dramatic grade improvements are absolutely possible.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">A* in Pure Maths</span>
+          <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Improved Mechanics Understanding</span>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">University Offer Secured</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
       <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 transition hover:shadow-2xl hover:-translate-y-1">
@@ -149,22 +194,77 @@
         <p class="mt-4 text-lg font-semibold text-center">After</p>
       </div>
     </div>
-      <!-- Third and fourth rows: 3 columns, with captions for 9th, 10th, 11th -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10">
-        
-        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center justify-between h-full transition hover:shadow-2xl hover:-translate-y-1">
-          <img src="reviews imgs/9th a-level maths student grade.png" alt="A-level maths student grade" class="w-full object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
-          <p class="mt-4 text-lg font-semibold text-center">Before</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center justify-between h-full transition hover:shadow-2xl hover:-translate-y-1">
-          <img src="reviews imgs/10th a-level maths student grade.png" alt="A-level maths student grade" class="w-full object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
-          <p class="mt-4 text-lg font-semibold text-center">Test Feedback</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center justify-between h-full transition hover:shadow-2xl hover:-translate-y-1">
-          <img src="reviews imgs/11th a-level maths student grade.png" alt="A-level maths student grade" class="w-full object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
-          <p class="mt-4 text-lg font-semibold text-center">After</p>
+      <!-- Year 12 Student's Rapid Progress: D to A in 2 Months -->
+<div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl shadow-2xl border-2 border-green-200 p-8 mt-10 mb-10">
+  <!-- Student Title -->
+  <div class="text-center mb-8">
+    <h3 class="text-3xl font-bold text-gray-900 mb-2">Year 12 A-Level Student's Rapid Transformation</h3>
+    <p class="text-xl text-gray-700">From Grade D to Grade A in Just 2 Months</p>
+    <div class="flex items-center justify-center gap-2 mt-3">
+      <span class="bg-orange-100 text-orange-700 px-4 py-1 rounded-full font-semibold text-sm">April 2025: Grade D</span>
+      <i class="ri-arrow-right-line text-2xl text-gray-400"></i>
+      <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full font-semibold text-sm">June 2025: Grade A</span>
+    </div>
+  </div>
+
+  <!-- Timeline: Before → Progress → After -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+    
+    <!-- Before: Grade D -->
+    <div class="bg-white rounded-2xl shadow-xl border-2 border-orange-200 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+      <div class="bg-orange-500 text-white px-4 py-1 rounded-full font-bold text-sm mb-4">APRIL 2025</div>
+      <img src="reviews imgs/9th a-level maths student grade.png" alt="Year 12 Student Before - Grade D in A-Level Maths" class="w-full h-auto object-contain max-h-[20rem] rounded-xl cursor-pointer mb-4" onclick="openModal(this)" />
+      <div class="text-center mt-auto">
+        <p class="text-lg font-bold text-orange-700">Start: Grade D</p>
+        <p class="text-sm text-gray-600">"Wanted to go from D to at least B, hopefully an A"</p>
+      </div>
+    </div>
+    
+    <!-- Mid-Progress: Test Feedback -->
+    <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-200 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+      <div class="bg-blue-500 text-white px-4 py-1 rounded-full font-bold text-sm mb-4">JUNE 2025</div>
+      <img src="reviews imgs/10th a-level maths student grade.png" alt="Year 12 Student Progress - Confident about getting A" class="w-full h-auto object-contain max-h-[20rem] rounded-xl cursor-pointer mb-4" onclick="openModal(this)" />
+      <div class="text-center mt-auto">
+        <p class="text-lg font-bold text-blue-700">Building Confidence</p>
+        <p class="text-sm text-gray-600">"Student confident of getting A"</p>
+      </div>
+    </div>
+
+    <!-- After: Grade A -->
+    <div class="bg-white rounded-2xl shadow-xl border-2 border-green-200 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
+      <div class="bg-green-500 text-white px-4 py-1 rounded-full font-bold text-sm mb-4">RESULTS DAY</div>
+      <img src="reviews imgs/11th a-level maths student grade.png" alt="Year 12 Student After - Grade A achieved in Pure Maths" class="w-full h-auto object-contain max-h-[20rem] rounded-xl cursor-pointer mb-4" onclick="openModal(this)" />
+      <div class="text-center mt-auto">
+        <p class="text-lg font-bold text-green-700">Result: Grade A ⭐</p>
+        <p class="text-sm text-gray-600">"A material - scored 75/100"</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Success Story Summary -->
+  <div class="bg-white rounded-xl p-6 border-2 border-green-100">
+    <div class="flex items-start gap-4">
+      <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+        <i class="ri-speed-line text-white text-2xl"></i>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-gray-900 mb-2">Exceptional Progress in Record Time</h4>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Starting at Grade D in April 2025, this Year 12 student set an ambitious goal: reach at least a B, ideally an A. Through focused tutoring on exam technique, understanding key concepts like exponential and logarithm modeling, and building genuine mathematical confidence, they achieved their dream grade in just 2 months. 
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          The student went from uncertainty to confidence, scoring 75/100 (A grade) on their Year 12 Pure Maths exam. This demonstrates that rapid, dramatic improvement is possible with the right support and dedicated effort.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">3 Grades Up in 2 Months</span>
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Confident & Prepared</span>
+          <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Pure Maths Excellence</span>
         </div>
       </div>
+    </div>
+  </div>
+</div>
       <!-- Fifth row: 2 columns, centered, no captions -->
       
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10">
@@ -202,23 +302,108 @@
     </script>
   </section>
   <!-- End Reviews Images Gallery -->
-  <!-- Live Group lesson Reviews Section -->
-  <div class="text-center mb-16 mt-16">
-    <h3 class="text-3xl font-bold mb-8 scroll-animate premium-text-glow">Live Group lesson Reviews</h3>
-    <div class="max-w-6xl w-full mx-auto">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-center">
-        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
-          <img src="live session/group feedback.jpg" alt="Group Feedback" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
-          <img src="live session/lesson 2 feedback.png" alt="Lesson 2 Feedback" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col items-center transition hover:shadow-2xl hover:-translate-y-1">
-          <img src="live session/money scheme.png" alt="Money Scheme" class="w-full h-auto object-contain max-h-[26rem] rounded-xl cursor-pointer" onclick="openModal(this)" />
+  <!-- Live Group Lesson Reviews Section -->
+<div class="bg-gradient-to-br from-purple-50 to-blue-50 py-16 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header with Context -->
+    <div class="text-center mb-12">
+      <h3 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Live Group Lesson Reviews</h3>
+      <p class="text-xl text-gray-700 mb-4 max-w-3xl mx-auto">Real-time feedback from students during interactive group sessions</p>
+      <div class="bg-white rounded-xl shadow-lg p-6 max-w-4xl mx-auto border-2 border-purple-200">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <i class="ri-chat-3-line text-white text-2xl"></i>
+          </div>
+          <div class="text-left">
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Interactive Learning in Action</h4>
+            <p class="text-gray-700 leading-relaxed">
+              These are genuine messages from students during live group lessons via WhatsApp. Watch how complex topics like square roots, quadratic equations, and algebraic manipulation go from "confusing" to "really easy" in real-time. Students openly share when concepts click, showing the immediate impact of clear, step-by-step teaching.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Lesson Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
+      
+      <!-- Lesson 1: Square Roots & Surds -->
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-purple-100 p-6 flex flex-col transition hover:shadow-2xl hover:-translate-y-1">
+        <div class="mb-4">
+          <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold">Lesson 1</span>
+          <h5 class="text-lg font-bold text-gray-900 mt-3 mb-2">Square Roots & Surds</h5>
+          <p class="text-sm text-gray-600 mb-4">Students mastering √b±√c and negative square roots</p>
+        </div>
+        <img src="live session/group feedback.jpg" alt="Live Group Lesson Feedback - Square Roots Success" class="w-full h-auto object-contain max-h-[20rem] rounded-xl cursor-pointer mb-4" onclick="openModal(this)" />
+        <div class="mt-auto pt-4 border-t border-gray-200">
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <i class="ri-emotion-happy-line text-green-500 text-lg"></i>
+            <span class="font-medium">"Thank you! It was good and helped alot"</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">✅ Immediate understanding & appreciation</p>
+        </div>
+      </div>
+
+      <!-- Lesson 2: Step-by-Step Explanations -->
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-blue-100 p-6 flex flex-col transition hover:shadow-2xl hover:-translate-y-1">
+        <div class="mb-4">
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">Lesson 2</span>
+          <h5 class="text-lg font-bold text-gray-900 mt-3 mb-2">Detailed Explanations</h5>
+          <p class="text-sm text-gray-600 mb-4">Breaking down complex problems step-by-step</p>
+        </div>
+        <img src="live session/lesson 2 feedback.png" alt="Live Group Lesson Feedback - Step by Step Teaching" class="w-full h-auto object-contain max-h-[20rem] rounded-xl cursor-pointer mb-4" onclick="openModal(this)" />
+        <div class="mt-auto pt-4 border-t border-gray-200">
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <i class="ri-check-double-line text-green-500 text-lg"></i>
+            <span class="font-medium">"Thank you for explaining everything step by step"</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">✅ Students value thorough, clear instruction</p>
+        </div>
+      </div>
+
+      <!-- Lesson 3: From Confusion to Clarity -->
+      <div class="bg-white rounded-2xl shadow-xl border-2 border-green-100 p-6 flex flex-col transition hover:shadow-2xl hover:-translate-y-1">
+        <div class="mb-4">
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">Lesson 3</span>
+          <h5 class="text-lg font-bold text-gray-900 mt-3 mb-2">Breakthrough Moments</h5>
+          <p class="text-sm text-gray-600 mb-4">Transforming confusion into confidence</p>
+        </div>
+        <img src="live session/money scheme.png" alt="Live Group Lesson Feedback - Students Understanding Clearly" class="w-full h-auto object-contain max-h-[20rem] rounded-xl cursor-pointer mb-4" onclick="openModal(this)" />
+        <div class="mt-auto pt-4 border-t border-gray-200">
+          <div class="flex items-center gap-2 text-sm text-gray-700">
+            <i class="ri-lightbulb-flash-line text-yellow-500 text-lg"></i>
+            <span class="font-medium">"I used to be very confused, now it's really easy!"</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-2">✅ Real-time transformation from confusion to mastery</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Key Takeaway Box -->
+    <div class="bg-white rounded-xl shadow-lg p-6 max-w-4xl mx-auto border-2 border-purple-200 mt-10">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+          <i class="ri-group-line text-white text-2xl"></i>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Why Group Lessons Work</h4>
+          <p class="text-gray-700 leading-relaxed mb-3">
+            These live WhatsApp group sessions create an interactive learning environment where students can ask questions, see worked examples in real-time, and learn from each other's questions. The immediate feedback shows concepts clicking as they happen.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Real-Time Support</span>
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Interactive Q&A</span>
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Peer Learning</span>
+            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">Immediate Clarity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
   <!-- End Live Group lesson Reviews Section -->
   <!-- Ready to Level Up Section -->
   <section class="bg-white text-primary py-20">
