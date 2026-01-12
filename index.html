@@ -33,6 +33,8 @@
 
   gtag('config', 'G-TSMW627D98');
 </script>
+<!-- Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
 tailwind.config = {
   theme: {
@@ -423,7 +425,7 @@ body { font-family: 'Inter', sans-serif; }
       <div class="hidden md:flex space-x-12">
         <a href="#" class="text-gray-600 font-bold force-brand-hover">Home</a>
         <a href="#about" class="text-gray-600 font-bold force-brand-hover">About</a>
-        <a href="#services" class="text-gray-600 font-bold force-brand-hover">Services</a>
+        <a href="#programmes" class="text-gray-600 font-bold force-brand-hover">Programmes</a>
         <a href="#testimonials" class="text-gray-600 font-bold force-brand-hover">Testimonials</a>
         <a href="more-reviews.html" class="text-gray-600 font-bold force-brand-hover">Results</a>
         <a href="#faq" class="text-gray-600 font-bold force-brand-hover">FAQs</a>
@@ -438,7 +440,7 @@ body { font-family: 'Inter', sans-serif; }
     <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-white shadow-lg rounded-b-xl px-6 py-4 absolute left-0 right-0 top-20 z-40">
       <a href="#" class="block text-gray-600 font-bold force-brand-hover">Home</a>
       <a href="#about" class="block text-gray-600 font-bold force-brand-hover">About</a>
-      <a href="#services" class="block text-gray-600 font-bold force-brand-hover">Services</a>
+      <a href="#programmes" class="block text-gray-600 font-bold force-brand-hover">Programmes</a>
       <a href="#testimonials" class="block text-gray-600 font-bold force-brand-hover">Testimonials</a>
       <a href="more-reviews.html" class="block text-gray-600 font-bold force-brand-hover">Results</a>
       <a href="#faq" class="block text-gray-600 font-bold force-brand-hover">FAQs</a>
@@ -509,6 +511,127 @@ body { font-family: 'Inter', sans-serif; }
   </div>
 </div>
 </section>
+<!-- Free Guide Section -->
+<section class="py-20" id="free-guide">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Get Your 2026 Free Maths Tips</h2>
+    </div>
+    <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-2xl premium-card-hover animate-float">
+      <h3 class="text-xl font-bold mb-6 text-primary text-center">KS3 To A-Level Maths Topic Guide</h3>
+      <form id="free-guide-form" class="space-y-6" action="https://script.google.com/macros/s/AKfycbzB2vDiMC6Wy5FGH5_SqXpG4QABmh6JelT_UQUuDO9ykPi3N58MFwZLJTiBDIOgKiAO/exec" method="POST">
+        <input type="hidden" name="form-name" value="free-guide">
+        <div>
+          <label for="fg-name" class="block text-gray-700 font-medium mb-1">Your Name</label>
+          <input id="fg-name" type="text" name="name" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-primary bg-gray-50 text-lg transition" required>
+        </div>
+        <div>
+          <label for="fg-email" class="block text-gray-700 font-medium mb-1">Your Email</label>
+          <input id="fg-email" type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-primary bg-gray-50 text-lg transition" required>
+        </div>
+   <div class="mb-4">
+  <label for="fg-level" class="block text-gray-700 font-medium mb-2">Your Level</label>
+  <div class="relative">
+    <select 
+      id="fg-level" 
+      name="level" 
+      class="w-full px-4 py-3 pr-10 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-gray-800 font-medium transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer appearance-none"
+      required
+    >
+      <option value="" selected disabled class="text-gray-400">Select your level</option>
+      <option value="KS3" class="hover:bg-blue-50">KS3</option>
+      <option value="GCSE" class="hover:bg-blue-50">GCSE / IGSCE</option>
+      <option value="A-LEVEL" class="hover:bg-blue-50">A-Level</option>
+    </select>
+    <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+      <i class="ri-arrow-down-s-fill text-primary text-xl"></i>
+    </div>
+  </div>
+</div>  
+<!-- reCAPTCHA Widget -->
+<div class="g-recaptcha" data-sitekey="6Ld7O0gsAAAAACTRPyORHLvTsPC6ZFSM3nEQnj7D"></div>
+
+
+        <button type="submit" class="!rounded-full w-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white py-3 text-lg font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition premium-button-hover">Send Me the Free Guide</button>
+      </form>
+      <div id="free-guide-success" class="hidden mt-8 text-center animate-fade-in">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <i class="ri-checkbox-circle-line text-4xl text-green-500 animate-pulse"></i>
+          <div class="text-2xl font-bold text-primary">Thank you!</div>
+          <div class="text-gray-700 text-lg">Your request has been received.<br>Check your email soon for your free guide.</div>
+        </div>
+      </div>
+      <div id="free-guide-error" class="hidden mt-8 text-center animate-fade-in">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <i class="ri-error-warning-line text-4xl text-red-500 animate-pulse"></i>
+          <div class="text-2xl font-bold text-primary">Oops!</div>
+          <div class="text-gray-700 text-lg">Something went wrong. Please try again later.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const fgForm = document.getElementById('free-guide-form');
+  const fgSuccess = document.getElementById('free-guide-success');
+  const fgError = document.getElementById('free-guide-error');
+  
+  if (fgForm && fgSuccess && fgError) {
+    fgForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Check reCAPTCHA
+      const recaptchaResponse = grecaptcha.getResponse();
+      
+      if (!recaptchaResponse) {
+        alert('Please complete the reCAPTCHA verification');
+        return;
+      }
+      
+      // Show loading state
+      const submitBtn = fgForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      
+      // Get form data
+      const formData = new FormData(fgForm);
+      formData.append('recaptchaToken', recaptchaResponse);
+      
+      // Send data to Google Apps Script
+      fetch(fgForm.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.result === 'success') {
+          // Show success message
+          fgForm.classList.add('hidden');
+          fgSuccess.classList.remove('hidden');
+          fgError.classList.add('hidden');
+          fgForm.reset();
+          grecaptcha.reset(); // Reset reCAPTCHA
+        } else {
+          throw new Error('Failed to send');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        fgError.classList.remove('hidden');
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      })
+      .finally(() => {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      });
+    });
+  }
+});
+</script>
 <!-- Who is this programme for? Section -->
 <section class="py-24 bg-white" id="programme-for">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -534,7 +657,7 @@ body { font-family: 'Inter', sans-serif; }
 </div>
       <!-- Topic 4: Busy Schedules -->
       <div class="card-gradient-border bg-white rounded-2xl p-10 shadow-xl border border-gray-100 m-2 flex flex-col items-center w-full scroll-scale scroll-animate premium-card-hover hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300" style="position: relative;">
-  <h3 class="text-2xl font-bold mb-3 text-center bg-gradient-to-r from-[#5271ff] to-[#38b6ff] bg-clip-text text-transparent">They're Lacking Discipline in Juggling Sports, Hobbies, and School</h3>
+  <h3 class="text-2xl font-bold mb-3 text-center bg-gradient-to-r from-[#5271ff] to-[#38b6ff] bg-clip-text text-transparent">Lacking Discipline between School, Hobbies, and Sports</h3>
   <p class="text-gray-700 leading-relaxed text-center text-lg">As a former professional athlete, I teach students how to learn efficiently so they can excel in maths without giving up what they love.</p>
 </div>
       <!-- Topic 5: Week Exam Instincts (centered) -->
@@ -656,11 +779,11 @@ body { font-family: 'Inter', sans-serif; }
         </h4>
 
         <p class="text-lg text-gray-700 leading-relaxed">
-          For over 13 years, He has helped students aged 11 to 19 transform their maths grades and confidence. Parents call him part tutor, part coach, because he doesn't just teach methods, he changes how students think about maths.
+          For over 13 years, He has helped students aged 11 to 19 transform their maths grades and confidence. Parents value him as more than a tutor, a mentor and role for their child because he doesn't just teach methods, he helps every child feel better about maths and provides guidance which MOST teachers miss out on.
         </p>
 
         <p class="text-lg text-gray-700 leading-relaxed">
-          What makes Shabiib different? <strong>Even teachers and headteachers choose him to tutor their own children.</strong> They see what happens in classrooms and trust him to fill the gaps their schools can't address.
+          What makes Shabiib different? <strong>The trust earned from headteachers and teachers selecting him to tutor thier own child.</strong> They see what happens in classrooms and trust him to fill the gaps their schools can't address.
         </p>
         
         <div class="bg-blue-50 border-l-4 border-primary p-6 my-6 rounded-r-lg">
@@ -670,12 +793,18 @@ body { font-family: 'Inter', sans-serif; }
         </div>
 
         <p class="text-lg text-gray-700 leading-relaxed">
-          His path wasn't perfect... He failed my first year at university, rebuilt himself, and graduated with a 2:1 in Maths with a year in industry. That struggle taught him something classrooms miss: <strong>understanding where students get stuck and how to fix it.</strong>
+          His path wasn't perfect... He failed his first year at university, rebuilt himself, and graduated with a 2:1 in Maths with a year in industry. That struggle taught him something classrooms miss: <strong>understanding where students get stuck and how to fix it.</strong>
         </p>
 
         <p class="text-lg text-gray-700 leading-relaxed">
-          He also played professional basketball as a teenager, which shaped his coaching style, made him disciplined and focused. When parents see their child finally "get it" after months of frustration, they understand why he has dedicated 13+ years to this work.
+          He also played professional basketball as a teenager, which shaped his teaching style, which students love. When parents see their child finally "get it" after months of frustration, they understand why he has dedicated 13+ years to this work.
         </p>
+
+        <div class="bg-blue-50 border-l-4 border-primary p-6 my-6 rounded-r-lg">
+          <p class="text-lg text-gray-800 leading-relaxed font-medium">
+            <strong>Katija, Parent of Year 13 Student:</strong> "Shabiib is completely invested in his students. He helped my daughter immensely with her A-Level Maths preparation. I highly recommend him."
+          </p>
+        </div>
       </div>
 
       <!-- Trust Credentials - Icon Based Design -->
@@ -834,7 +963,7 @@ body { font-family: 'Inter', sans-serif; }
         </div>
         <p class="text-gray-700 mb-6 italic flex-grow">"Since beginning Maths sessions my son's confidence has definitely improved. He is awaiting news of moving sets at school as he was able to complete questions on a recent test, that were not expected for his current set of maths. Great news!"</p>
         <div class="flex items-center mt-auto">
-          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">S</div>
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">A</div>
           <div>
             <div class="font-semibold text-gray-900">Abigail, Parent of Year 10 Student</div>
             <div class="text-sm text-gray-600">March 2025</div>
@@ -854,7 +983,7 @@ body { font-family: 'Inter', sans-serif; }
         </div>
         <p class="text-gray-700 mb-6 italic flex-grow">"Shabib is a brilliant math tutor, his way of teachings are fun and make everything in math simple which helped me pass my tests. Before I was not passing as what I have learnt in school was not helpful and never shows up in the test. Schools also always go at the pace of the top students making others fall behind, however Shabib turned this around for me making me top of my class achieving higher than everyone else"</p>
         <div class="flex items-center mt-auto">
-          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">J</div>
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">E</div>
           <div>
             <div class="font-semibold text-gray-900">Ernie, Year 11 GCSE Student</div>
             <div class="text-sm text-gray-600">February 2025</div>
@@ -874,7 +1003,7 @@ body { font-family: 'Inter', sans-serif; }
         </div>
         <p class="text-gray-700 mb-6 italic flex-grow">"Shabiib explains complex concepts in a way my daughter actually understands. Since starting, her confidence has grown and her problem-solving skills have improved significantly. She actually enjoys maths now!"</p>
 <div class="flex items-center mt-auto">
-  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">M</div>
+  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">J</div>
   <div>
     <div class="font-semibold text-gray-900">Jennifer, Parent of Year 10 Student</div>
     <div class="text-sm text-gray-600">April 2025</div>
@@ -914,7 +1043,7 @@ body { font-family: 'Inter', sans-serif; }
         </div>
         <p class="text-gray-700 mb-6 italic flex-grow">"Shabiib explained A-Level content clearly and made me feel confident for my exams. He sends practice questions and lesson summaries after every session, which really helped me prepare."</p>
 <div class="flex items-center mt-auto">
-  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">A</div>
+  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">R</div>
   <div>
     <div class="font-semibold text-gray-900">Ramona, Year 13 A-Level Student</div>
     <div class="text-sm text-gray-600">June 2025</div>
@@ -934,7 +1063,7 @@ body { font-family: 'Inter', sans-serif; }
         </div>
         <p class="text-gray-700 mb-6 italic flex-grow">"Shabiib is completely invested in his students. He helped my daughter immensely with her A-Level Maths preparation. I highly recommend him."</p>
 <div class="flex items-center mt-auto">
-  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">L</div>
+  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">K</div>
   <div>
     <div class="font-semibold text-gray-900">Katija, Parent of Year 13 Student</div>
     <div class="text-sm text-gray-600">June 2025</div>
@@ -954,7 +1083,7 @@ body { font-family: 'Inter', sans-serif; }
         </div>
         <p class="text-gray-700 mb-6 italic flex-grow">"Shabiib helped my daughter rekindle her love of maths. He made statistics accessible and filled gaps her college teacher couldn't address. His summer transition work built the strong foundations she needed in Pure Maths. As a headteacher myself, I know good teaching when I see it."</p>
 <div class="flex items-center mt-auto">
-  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">H</div>
+  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">L</div>
   <div>
     <div class="font-semibold text-gray-900">Louise, Headteacher & Parent of Year 13 Student</div>
     <div class="text-sm text-gray-600">May 2025</div>
@@ -974,7 +1103,7 @@ body { font-family: 'Inter', sans-serif; }
         </div>
         <p class="text-gray-700 mb-6 italic flex-grow">"Very extensive notes and very insightful in spending time going over errors and to create steps into solving answers and to make sure that it is understood in the lead up the IGCSE examinations a great tutor and a very nice person."</p>
         <div class="flex items-center mt-auto">
-          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">S</div>
+          <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">J</div>
           <div>
             <div class="font-semibold text-gray-900">Joseph, IGCSE Higher Maths Student</div>
             <div class="text-sm text-gray-600">October 2024</div>
@@ -994,7 +1123,7 @@ body { font-family: 'Inter', sans-serif; }
         </div>
         <p class="text-gray-700 mb-6 italic flex-grow">"My daughter actually loves her maths lessons now! Her confidence has grown as she finally understands the material. Shabiib makes complex concepts easy to grasp, and she looks forward to each session. Highly recommend!"</p>
 <div class="flex items-center mt-auto">
-  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">P</div>
+  <div class="w-12 h-12 bg-gradient-to-br from-[#5271ff] to-[#38b6ff] rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">C</div>
   <div>
     <div class="font-semibold text-gray-900">Cemile, Parent of GCSE Resit Student</div>
     <div class="text-sm text-gray-600">October 2024</div>
@@ -1005,8 +1134,8 @@ body { font-family: 'Inter', sans-serif; }
   </div>
 </section>
 
-<!-- Our Services Section -->
-<section class="bg-white py-20" id="services">
+<!-- Our Programmes Section -->
+<section class="bg-white py-20" id="programmes">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Stuck at GCSE Maths Grade 5/6?</h2>
@@ -1036,7 +1165,7 @@ body { font-family: 'Inter', sans-serif; }
           <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-3">
             <i class="ri-trophy-line text-white text-lg"></i>
           </div>
-          <h3 class="text-lg font-bold mb-2 text-gray-800">GCSE Grade 8/9 Maths Programme</h3>
+          <h3 class="text-lg font-bold mb-2 text-gray-800">GCSE Grade 8/9 Maths Programme (Group)</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">Secure top grades for full range of offers across A-level Subjects.</p>
           <div class="mb-4">
           </div>
@@ -1050,7 +1179,7 @@ body { font-family: 'Inter', sans-serif; }
           <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-3">
             <i class="ri-star-line text-white text-lg"></i>
           </div>
-          <h3 class="text-lg font-bold mb-2 text-gray-800">IGCSE Higher Maths Programme</h3>
+          <h3 class="text-lg font-bold mb-2 text-gray-800">IGCSE Higher Maths Programme (Group)</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">Become an above average students with average grades and deeper understanding.</p>
           <div class="mb-4">
           </div>
@@ -1064,7 +1193,7 @@ body { font-family: 'Inter', sans-serif; }
           <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-3">
             <i class="ri-graduation-cap-line text-white text-lg"></i>
           </div>
-          <h3 class="text-lg font-bold mb-2 text-gray-800">A Level Maths Programme</h3>
+          <h3 class="text-lg font-bold mb-2 text-gray-800">A Level Maths Programme (Group)</h3>
           <p class="text-sm text-gray-700 mb-4 leading-relaxed">Move up 3 grades across Pure and Applied Maths combined</p>
           <div class="mb-4">
 
@@ -1076,7 +1205,7 @@ body { font-family: 'Inter', sans-serif; }
     
     <!-- Guarantee Text -->
     <div class="text-center mt-12">
-      <p class="text-2xl font-bold text-gray-800">25 lessons across 10 Weeks. 14 Day Full Money Back Guarantee.</p>
+      <p class="text-2xl font-bold text-gray-800">Upto 25 lessons across 10 Weeks. 14 Day Full Money Back Guarantee.</p>
     </div>
     
     <!-- Single CTA Below Pricing -->
@@ -1146,121 +1275,6 @@ body { font-family: 'Inter', sans-serif; }
     });
   });
 </script>
-
-
-<!-- Free Guide Section -->
-<section class="py-20" id="free-guide">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold mb-4 scroll-animate premium-text-glow">Get Your Free Guide</h2>
-    </div>
-    <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-2xl premium-card-hover animate-float">
-      <h3 class="text-xl font-bold mb-6 text-primary text-center">KS3 To A-Level Maths Topic Guide</h3>
-      <form id="free-guide-form" class="space-y-6" action="https://script.google.com/macros/s/AKfycbzB2vDiMC6Wy5FGH5_SqXpG4QABmh6JelT_UQUuDO9ykPi3N58MFwZLJTiBDIOgKiAO/exec" method="POST">
-        <input type="hidden" name="form-name" value="free-guide">
-        <div>
-          <label for="fg-name" class="block text-gray-700 font-medium mb-1">Your Name</label>
-          <input id="fg-name" type="text" name="name" placeholder="Enter your name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-primary bg-gray-50 text-lg transition" required>
-        </div>
-        <div>
-          <label for="fg-email" class="block text-gray-700 font-medium mb-1">Your Email</label>
-          <input id="fg-email" type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-primary bg-gray-50 text-lg transition" required>
-        </div>
-   <div class="mb-4">
-  <label for="fg-level" class="block text-gray-700 font-medium mb-2">Your Level</label>
-  <div class="relative">
-    <select 
-      id="fg-level" 
-      name="level" 
-      class="w-full px-4 py-3 pr-10 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-gray-800 font-medium transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer appearance-none"
-      required
-    >
-      <option value="" selected disabled class="text-gray-400">Select your level</option>
-      <option value="KS3" class="hover:bg-blue-50">KS3</option>
-      <option value="GCSE" class="hover:bg-blue-50">GCSE / IGSCE</option>
-      <option value="A-LEVEL" class="hover:bg-blue-50">A-Level</option>
-    </select>
-    <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-      <i class="ri-arrow-down-s-fill text-primary text-xl"></i>
-    </div>
-  </div>
-</div>  
-
-
-        <button type="submit" class="!rounded-full w-full bg-gradient-to-r from-[#5271ff] to-[#38b6ff] text-white py-3 text-lg font-semibold hover:from-[#38b6ff] hover:to-[#5271ff] shadow transition premium-button-hover">Send Me the Free Guide</button>
-      </form>
-      <div id="free-guide-success" class="hidden mt-8 text-center animate-fade-in">
-        <div class="flex flex-col items-center justify-center gap-2">
-          <i class="ri-checkbox-circle-line text-4xl text-green-500 animate-pulse"></i>
-          <div class="text-2xl font-bold text-primary">Thank you!</div>
-          <div class="text-gray-700 text-lg">Your request has been received.<br>Check your email soon for your free guide.</div>
-        </div>
-      </div>
-      <div id="free-guide-error" class="hidden mt-8 text-center animate-fade-in">
-        <div class="flex flex-col items-center justify-center gap-2">
-          <i class="ri-error-warning-line text-4xl text-red-500 animate-pulse"></i>
-          <div class="text-2xl font-bold text-primary">Oops!</div>
-          <div class="text-gray-700 text-lg">Something went wrong. Please try again later.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const fgForm = document.getElementById('free-guide-form');
-  const fgSuccess = document.getElementById('free-guide-success');
-  const fgError = document.getElementById('free-guide-error');
-  
-  if (fgForm && fgSuccess && fgError) {
-    fgForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-
-      
-      // Show loading state
-      const submitBtn = fgForm.querySelector('button[type="submit"]');
-      const originalBtnText = submitBtn.textContent;
-      submitBtn.textContent = 'Sending...';
-      submitBtn.disabled = true;
-      
-      // Get form data
-      const formData = new FormData(fgForm);
-      
-      // Send data to Google Apps Script
-      fetch(fgForm.action, {
-  method: 'POST',
-  body: formData
-})
-.then(response => response.json())
-.then(data => {
-  if (data.result === 'success') {
-    // Show success message
-    fgForm.classList.add('hidden');
-    fgSuccess.classList.remove('hidden');
-    fgError.classList.add('hidden');
-    fgForm.reset();
-  } else {
-    throw new Error('Failed to send');
-  }
-})
-.catch(error => {
-  console.error('Error:', error);
-  fgError.classList.remove('hidden');
-  submitBtn.textContent = originalBtnText;
-  submitBtn.disabled = false;
-})
-.finally(() => {
-  submitBtn.textContent = originalBtnText;
-  submitBtn.disabled = false;
-});
-    });
-  }
-});
-</script>
-
-
 
 <!-- FAQ Section -->
 <section class="py-24 bg-gray-50" id="faq">
